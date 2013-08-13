@@ -1,1 +1,1 @@
-Status:Sch finished.
+Status:Pcb Rev.1 Finished
