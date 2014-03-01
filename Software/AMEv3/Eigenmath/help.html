@@ -1,0 +1,686 @@
+<html>
+<head>
+</head>
+<body>
+<tt>
+
+<center>
+<img src="man.jpg">
+
+<p>
+<a href="http://eigenmath.googlecode.com/files/Eigenmath.pdf"">Download the Eigenmath manual (PDF)</a>
+
+<p>
+<a href="examples.html">Example scripts</a>
+
+<p>
+<hr>
+
+<p>
+<table cellspacing=20><tr><td valign="top"><tt>
+
+<a href="#abs">abs</a><br>
+<a href="#adj">adj</a><br>
+<a href="#and">and</a><br>
+<a href="#arccos">arccos</a><br>
+<a href="#arccosh">arccosh</a><br>
+<a href="#arcsin">arcsin</a><br>
+<a href="#arcsinh">arcsinh</a><br>
+<a href="#arctan">arctan</a><br>
+<a href="#arctanh">arctanh</a><br>
+<a href="#arg">arg</a><br>
+<a href="#atomize">atomize</a><br>
+<a href="#ceiling">ceiling</a><br>
+<a href="#check">check</a><br>
+<a href="#choose">choose</a><br>
+
+</tt></td><td valign="top"><tt>
+
+<a href="#circexp">circexp</a><br>
+<a href="#coeff">coeff</a><br>
+<a href="#cofactor">cofactor</a><br>
+<a href="#conj">conj</a><br>
+<a href="#contract">contract</a><br>
+<a href="#cos">cos</a><br>
+<a href="#cosh">cosh</a><br>
+<a href="#cross">cross</a><br>
+<a href="#curl">curl</a><br>
+<a href="#d">d</a><br>
+<a href="#defint">defint</a><br>
+<a href="#deg">deg</a><br>
+<a href="#denominator">denominator</a><br>
+
+</tt></td><td valign="top"><tt>
+
+<a href="#det">det</a><br>
+<a href="#dim">dim</a><br>
+<a href="#do">do</a><br>
+<a href="#dot">dot</a><br>
+<a href="#draw">draw</a><br>
+<a href="#eigen">eigen</a><br>
+<a href="#erf">erf</a><br>
+<a href="#erfc">erfc</a><br>
+<a href="#eval">eval</a><br>
+<a href="#exp">exp</a><br>
+<a href="#expand">expand</a><br>
+<a href="#expcos">expcos</a><br>
+<a href="#expsin">expsin</a><br>
+<a href="#factor">factor</a><br>
+
+</tt></td><td valign="top"><tt>
+
+<a href="#factorial">factorial</a><br>
+<a href="#filter">filter</a><br>
+<a href="#float">float</a><br>
+<a href="#floor">floor</a><br>
+<a href="#for">for</a><br>
+<a href="#gcd">gcd</a><br>
+<a href="#hermite">hermite</a><br>
+<a href="#hilbert">hilbert</a><br>
+<a href="#imag">imag</a><br>
+<a href="#inner">inner</a><br>
+<a href="#integral">integral</a><br>
+<a href="#inv">inv</a><br>
+<a href="#isprime">isprime</a><br>
+
+</tt></td><td valign="top"><tt>
+
+<a href="#laguerre">laguerre</a><br>
+<a href="#lcm">lcm</a><br>
+<a href="#leading">leading</a><br>
+<a href="#legendre">legendre</a><br>
+<a href="#log">log</a><br>
+<a href="#mag">mag</a><br>
+<a href="#mod">mod</a><br>
+<a href="#not">not</a><br>
+<a href="#nroots">nroots</a><br>
+<a href="#numerator">numerator</a><br>
+<a href="#or">or</a><br>
+<a href="#outer">outer</a><br>
+<a href="#polar">polar</a><br>
+
+</tt></td><td valign="top"><tt>
+
+<a href="#prime">prime</a><br>
+<a href="#print">print</a><br>
+<a href="#product">product</a><br>
+<a href="#quote">quote</a><br>
+<a href="#quotient">quotient</a><br>
+<a href="#rank">rank</a><br>
+<a href="#rationalize">rationalize</a><br>
+<a href="#real">real</a><br>
+<a href="#rect">rect</a><br>
+<a href="#roots">roots</a><br>
+<a href="#simplify">simplify</a><br>
+<a href="#sin">sin</a><br>
+<a href="#sinh">sinh</a><br>
+
+</tt></td><td valign="top"><tt>
+
+<a href="#sqrt">sqrt</a><br>
+<a href="#stop">stop</a><br>
+<a href="#subst">subst</a><br>
+<a href="#sum">sum</a><br>
+<a href="#tan">tan</a><br>
+<a href="#tanh">tanh</a><br>
+<a href="#taylor">taylor</a><br>
+<a href="#test">test</a><br>
+<a href="#transpose">transpose</a><br>
+<a href="#unit">unit</a><br>
+<a href="#zero">zero</a><br>
+
+</tt></td></tr></table>
+
+<p>
+<hr>
+
+</center>
+
+<p>
+<h1><tt><a name="abs">abs(<i>x</i>)</a></tt></h1>
+Returns the absolute value or vector length of x.
+<a href="src/abs.c.html">src</a>
+
+<p>
+<h1><tt><a name="adj">adj(<i>m</i>)</a></tt></h1>
+Returns the adjunct of matrix m.
+The inverse of m is equal to adj(m) divided by det(m).
+<a href="src/adj.c.html">src</a>
+
+<p><h1><tt><a name="and">and(<i>a,b,...</i>)</a></tt></h1>
+Logical-and of predicate expressions.
+<a href="src/test.c.html#eval_and">src</a>
+
+<p>
+<h1><tt><a name="arccos">arccos(<i>x</i>)</a></tt></h1>
+Returns the inverse cosine of x.
+<a href="src/arccos.c.html">src</a>
+
+<p>
+<h1><tt><a name="arccosh">arccosh(<i>x</i>)</a></tt></h1>
+Returns the inverse hyperbolic cosine of x.
+<a href="src/arccosh.c.html">src</a>
+
+<p>
+<h1><tt><a name="arcsin">arcsin(<i>x</i>)</a></tt></h1>
+Returns the inverse sine of x.
+<a href="src/arcsin.c.html">src</a>
+
+<p>
+<h1><tt><a name="arcsinh">arcsinh(<i>x</i>)</a></tt></h1>
+Returns the inverse hyperbolic sine of x.
+<a href="src/arcsinh.c.html">src</a>
+
+<p>
+<h1><tt><a name="arctan">arctan(<i>x</i>)</a></tt></h1>
+Returns the inverse tangent of x.
+<a href="src/arctan.c.html">src</a>
+
+<p>
+<h1><tt><a name="arctanh">arctanh(<i>x</i>)</a></tt></h1>
+Returns the inverse hyperbolic tangent of x.
+<a href="src/arctanh.c.html">src</a>
+
+<p>
+<h1><tt><a name="arg">arg(<i>z</i>)</a></tt></h1>
+Returns the angle of complex z.
+<a href="src/arg.c.html">src</a>
+
+<p>
+<h1><tt><a name="atomize">atomize(<i>x</i>)</a></tt></h1>
+Returns a vector containing the subexpressions of expression x.
+<a href="src/atomize.c.html">src</a>
+
+<p>
+<h1><tt><a name="ceiling">ceiling(<i>x</i>)</a></tt></h1>
+Returns the smallest integer not less than x.
+<a href="src/ceiling.c.html">src</a>
+
+<p>
+<h1><tt><a name="check">check(<i>x</i>)</a></tt></h1>
+If x is true then continue, else stop.
+<a href="src/eval.c.html#eval_check">src </a>
+
+<p>
+<h1><tt><a name="choose">choose(<i>n,k</i>)</a></tt></h1>
+Returns the number of combinations of n items taken k at a time.
+<a href="src/choose.c.html">src</a>
+
+<p>
+<h1><tt><a name="circexp">circexp(<i>x</i>)</a></tt></h1>
+Returns expression x with circular and hyperbolic functions converted to exponential forms.
+Sometimes this will simplify an expression.
+<a href="src/circexp.c.html">src</a>
+
+<p>
+<h1><tt><a name="coeff">coeff(<i>p,x,n</i>)</a></tt></h1>
+Returns the coefficient of x to the n in polynomial p.
+The x argument can be omitted for polynomials in x.
+<a href="src/coeff.c.html">src</a>
+
+<p>
+<h1><tt><a name="cofactor">cofactor(<i>m,i,j</i>)</a></tt></h1>
+Returns the cofactor of m for row i and column j.
+<a href="src/cofactor.c.html">src</a>
+
+<p>
+<h1><tt><a name="conj">conj(<i>z</i>)</a></tt></h1>
+Returns the complex conjugate of z.
+<a href="src/conj.c.html">src</a>
+
+<p>
+<h1><tt><a name="contract">contract(<i>a,i,j</i>)</a></tt></h1>
+Returns "a" summed over indices i and j.
+If i and j are omitted then 1 and 2 are used.
+contract(m) is equivalent to the trace of matrix m.
+<a href="src/contract.c.html">src</a>
+
+<p>
+<h1><tt><a name="cos">cos(<i>x</i>)</a></tt></h1>
+Returns the cosine of x.
+<a href="src/cos.c.html">src</a>
+
+<p>
+<h1><tt><a name="cosh">cosh(<i>x</i>)</a></tt></h1>
+Returns the hyperbolic cosine of x.
+<a href="src/cosh.c.html">src</a>
+
+<p>
+<h1><tt><a name="cross">cross(<i>u,v</i>)</a></tt></h1>
+Returns the cross product of vectors u and v.
+
+<p>
+<h1><tt><a name="curl">curl(<i>u</i>)</a></tt></h1>
+Returns the curl of vector u.
+
+<p>
+<h1><tt><a name="d">d(<i>f,x</i>)</a></tt></h1>
+Returns the partial derivative of f with respect to x.
+<a href="src/derivative.c.html">src</a>
+
+<p>
+<h1><tt><a name="defint">defint(<i>f,x,a,b</i>)</a></tt></h1>
+Returns the definite integral of f with respect to x
+evaluated from "a" to b.
+The argument list can be extended for multiple integrals.
+For example, defint(f,x,a,b,y,c,d).
+<a href="src/defint.c.html"> src</a>
+
+<p>
+<h1><tt><a name="deg">deg(<i>p,x</i>)</a></tt></h1>
+Returns the degree of polynomial p(x).
+<a href="src/degree.c.html">src</a>
+
+<p>
+<h1><tt><a name="denominator">denominator(<i>x</i>)</a></tt></h1>
+Returns the denominator of expression x.
+<a href="src/denominator.c.html">src</a>
+
+<p>
+<h1><tt><a name="det">det(<i>m</i>)</a></tt></h1>
+Returns the determinant of matrix m.
+<a href="src/det.c.html">src</a>
+
+<p>
+<h1><tt><a name="dim">dim(<i>a,n</i>)</a></tt></h1>
+Returns the cardinality of the nth index of tensor "a".
+<a href="src/eval.c.html#eval_dim">src</a>
+
+<p>
+<h1><tt><a name="do">do(<i>a,b,...</i>)</a></tt></h1>
+Evaluates each argument from left to right.
+Returns the result of the last argument.
+<a href="src/eval.c.html#eval_do">src</a>
+
+<p>
+<h1><tt><a name="dot">dot(<i>a,b,...</i>)</a></tt></h1>
+Returns the dot or inner product of tensors.
+<a href="src/inner.c.html">src</a>
+
+<p>
+<h1><tt><a name="draw">draw(<i>f,x</i>)</a></tt></h1>
+Draws a graph of f(x).
+Drawing ranges can be set with xrange and yrange.
+<a href="src/draw.c.html">src</a>
+
+<p>
+<h1><tt><a name="eigen">eigen(<i>m</i>)</a></tt></h1>
+<h1><tt>eigenval(<i>m</i>)</tt></h1>
+<h1><tt>eigenvec(<i>m</i>)</tt></h1>
+These functions compute eigenvalues and eigenvectors numerically.
+Matrix m must be both numerical and symmetric.
+The eigenval function returns a matrix with the eigenvalues along
+the diagonal.
+The eigenvec function returns a matrix with the eigenvectors arranged as row
+vectors.
+The eigen function does not return anything but stores the eigenvalue matrix 
+in D and the eigenvector matrix in Q.
+The rows of Q are the eigenvectors of m, thus m = dot(transpose(Q),D,Q).
+<a href="src/eigen.c.html">src</a>
+
+<!--
+<p>
+Example 1. Check the relation AX = lambda X where lambda is an eigenvalue and
+X is the associated eigenvector.
+<pre>
+<i>Enter</i>
+
+     A = hilbert(3)
+
+     eigen(A)
+
+     lambda = D[1,1]
+
+     X = Q[1]
+
+     dot(A,X) - lambda X
+
+<i>Result</i>
+
+     -1.16435e-14
+ 
+     -6.46705e-15
+ 
+     -4.55191e-15
+</pre> 
+<p>
+Example 2: Check the relation A = Q<sup>T</sup>DQ.
+<pre>
+<i>Enter</i>
+
+	A - dot(transpose(Q),D,Q)
+
+<i>Result</i>
+ 
+	6.27365e-12    -1.58236e-11   1.81902e-11
+ 
+	-1.58236e-11   -1.95365e-11   2.56514e-12
+ 
+	1.81902e-11    2.56514e-12    1.32627e-11
+</pre>
+-->
+
+<p>
+<h1><tt><a name="erf">erf(<i>x</i>)</a></tt></h1>
+Error function of x.
+<a href="src/erf.c.html">src</a>
+
+<p>
+<h1><tt><a name="erfc">erfc(<i>x</i>)</a></tt></h1>
+Complementary error function of x.
+<a href="src/erfc.c.html">src</a>
+
+<p>
+<h1><tt><a name="eval">eval(<i>f,x,a</i>)</a></tt></h1>
+Returns f evaluated at x=a.
+<a href="src/eval.c.html#eval_eval">src</a>
+
+<p>
+<h1><tt><a name="exp">exp(<i>x</i>)</a></tt></h1>
+Returns the exponential of x.
+<a href="src/eval.c.html#eval_exp">src</a>
+
+<p>
+<h1><tt><a name="expand">expand(<i>r,x</i>)</a></tt></h1>
+Returns the partial fraction expansion of the ratio of polynomials r in  x.
+<a href="src/expand.c.html">src</a>
+
+<p>
+<h1><tt><a name="expcos">expcos(<i>x</i>)</a></tt></h1>
+Returns the exponential cosine of x.
+<a href="src/expcos.c.html">src</a>
+
+<p>
+<h1><tt><a name="expsin">expsin(<i>x</i>)</a></tt></h1>
+Returns the exponential sine of x.
+<a href="src/expsin.c.html">src</a>
+
+<p>
+<h1><tt><a name="factor">factor(<i>n</i>)</a></tt></h1>
+Factors integer n.
+<a href="src/factor.c.html">src</a>
+
+<p>
+<h1><tt>factor(<i>p,x</i>)</tt></h1>
+Factors polynomial p of x.
+The x can be omitted for polynomials in x.
+The polynomial should be factorable over integers.
+The argument list can be extended for multivariate polynomials.
+For example, factor(p,x,y) factors p over x and then over y.
+<a href="src/factorpoly.c.html">src</a>
+
+<p>
+<h1><tt><a name="factorial">factorial(<i>x</i>)</a></tt></h1>
+Can be entered as x!
+<a href="src/factorial.c.html">src</a>
+
+<p>
+<h1><tt><a name="filter">filter(<i>f,a,b,...</i>)</a></tt></h1>
+Returns f excluding any terms containing a, b, etc.
+<a href="src/filter.c.html">src</a>
+
+<p>
+<h1><tt><a name="float">float(<i>x</i>)</a></tt></h1>
+Converts rational numbers and integers to floating point values.
+The symbol pi is also converted.
+<a href="src/float.c.html">src</a>
+
+<p>
+<h1><tt><a name="floor">floor(<i>x</i>)</a></tt></h1>
+Returns the largest integer not greater than x.
+<a href="src/floor.c.html">src</a>
+
+<p>
+<h1><tt><a name="for">for(<i>i,j,k,a,b,...</i>)</a></tt></h1>
+For i equals j through k evaluate a, b, etc.
+<a href="src/for.c.html">src</a>
+
+<p>
+<h1><tt><a name="gcd">gcd(<i>a,b,...</i>)</a></tt></h1>
+Returns the greatest common divisor.
+<a href="src/gcd.c.html">src</a>
+
+<p>
+<h1><tt><a name="hermite">hermite(<i>x,n</i>)</a></tt></h1>
+Returns the nth Hermite polynomial in x.
+<a href="src/hermite.c.html">src</a>
+
+<p>
+<h1><tt><a name="hilbert">hilbert(<i>n</i>)</a></tt></h1>
+Returns an n by n Hilbert matrix.
+<a href="src/hilbert.c.html">src</a>
+
+<p>
+<h1><tt><a name="imag">imag(<i>z</i>)</a></tt></h1>
+Returns the imaginary part of complex z.
+<a href="src/imag.c.html">src</a>
+
+<p>
+<h1><tt><a name="inner">inner(<i>a,b,...</i>)</a></tt></h1>
+Returns the inner product of tensors.
+Same as the dot product.
+<a href="src/inner.c.html">src</a>
+
+<p>
+<h1><tt><a name="integral">integral(<i>f,x</i>)</a></tt></h1>
+Returns the integral of f with respect to x.
+<a href="src/integral.c.html">src</a>
+
+<p>
+<h1><tt><a name="inv">inv(<i>m</i>)</a></tt></h1>
+Returns the inverse of matrix m.
+<a href="src/inv.c.html">src</a>
+
+<p>
+<h1><tt><a name="isprime">isprime(<i>n</i>)</a></tt></h1>
+Returns 1 if n is a prime number, returns zero otherwise.
+<a href="src/isprime.c.html">src</a>
+
+<p>
+<h1><tt><a name="laguerre">laguerre(<i>x,n,a</i>)</a></tt></h1>
+Returns the nth Laguerre polynomial in x.
+If "a" is omitted then a=0 is used.
+<a href="src/laguerre.c.html">src</a>
+
+<p>
+<h1><tt><a name="lcm">lcm(<i>a,b,...</i>)</a></tt></h1>
+Returns the least common multiple.
+<a href="src/lcm.c.html">src</a>
+
+<p>
+<h1><tt><a name="leading">leading(<i>p,x</i>)</a></tt></h1>
+Returns the leading coefficient of polynomial p in x.
+<a href="src/leading.c.html">src</a>
+
+<p>
+<h1><tt><a name="legendre">legendre(<i>x,n,m</i>)</a></tt></h1>
+Returns the nth Legendre polynomial in x.
+If m is omitted then m=0 is used.
+<a href="src/legendre.c.html">src</a>
+
+<p>
+<h1><tt><a name="log">log(<i>x</i>)</a></tt></h1>
+Returns the natural logarithm of x.
+<a href="src/log.c.html">src</a>
+
+<p>
+<h1><tt><a name="mag">mag(<i>z</i>)</a></tt></h1>
+Returns the magnitude of complex z.
+<a href="src/mag.c.html">src</a>
+
+<p>
+<h1><tt><a name="mod">mod(<i>a,b</i>)</a></tt></h1>
+Returns the remainder of the result of "a" divided by b.
+<a href="src/mod.c.html">src</a>
+
+<p>
+<h1><tt><a name="not">not(<i>x</i>)</a></tt></h1>
+Returns the logical negation of x.
+<a href="src/test.c.html#eval_not">src</a>
+
+<p>
+<h1><tt><a name="nroots">nroots(<i>p,x</i>)</a></tt></h1>
+Returns all of the roots, both real and complex,
+of polynomial p in x.
+The roots are computed numerically.
+The coefficients of p can be real or complex.
+<a href="src/nroots.c.html">src</a>
+
+<p>
+<h1><tt><a name="numerator">numerator(<i>x</i>)</a></tt></h1>
+Returns the numerator of expression x.
+<a href="src/numerator.c.html">src</a>
+
+<p>
+<h1><tt><a name="or">or(<i>a,b,...</i>)</a></tt></h1>
+Logical-or of predicate expressions.
+<a href="src/test.c.html#eval_or">src</a>
+
+<p>
+<h1><tt><a name="outer">outer(<i>a,b,...</i>)</a></tt></h1>
+Returns the outer product of tensors.
+Also known as the tensor product.
+<a href="src/outer.c.html">src</a>
+
+<p>
+<h1><tt><a name="polar">polar(<i>z</i>)</a></tt></h1>
+Returns complex z in polar form.
+<a href="src/polar.c.html">src</a>
+
+<p>
+<h1><tt><a name="prime">prime(<i>n</i>)</a></tt></h1>
+Returns the nth prime number.
+The domain of n is 1 to 10000.
+<a href="src/prime.c.html">src</a>
+
+<p>
+<h1><tt><a name="print">print(<i>a,b,...</i>)</a></tt></h1>
+Evaluate expressions and print the results.
+Useful for printing from inside a "for" loop.
+<a href="src/eval.c.html#eval_print">src</a>
+
+<p>
+<h1><tt><a name="product">product(<i>i,j,k,f</i>)</a></tt></h1>
+For i equals j through k evaluate f.
+Returns the product of all f.
+<a href="src/product.c.html">src</a>
+
+<p>
+<h1><tt><a name="quote">quote(<i>x</i>)</a></tt></h1>
+Returns expression x without evaluating it first.
+<a href="src/eval.c.html#eval_quote">src</a>
+
+<p><h1><tt><a name="quotient">quotient(<i>p,q,x</i>)</a></tt></h1>
+Returns the quotient of polynomial p(x) over q(x).
+The last argument can be omitted for polynomials in x.
+The remainder can be calculated by p-q*quotient(p,q).
+<a href="src/quotient.c.html">src</a>
+
+<p>
+<h1><tt><a name="rank">rank(<i>a</i>)</a></tt></h1>
+Returns the number of indices that tensor "a" has.
+<a href="src/eval.c.html#eval_rank">src</a>
+
+<p>
+<h1><tt><a name="rationalize">rationalize(<i>x</i>)</a></tt></h1>
+Returns x with everything over a common denominator.
+<a href="src/rationalize.c.html">src</a>
+
+<p>
+<h1><tt><a name="real">real(<i>z</i>)</a></tt></h1>
+Returns the real part of complex z.
+<a href="src/real.c.html">src</a>
+
+<p>
+<h1><tt><a name="rect">rect(<i>z</i>)</a></tt></h1>
+Returns complex z in rectangular form.
+<a href="src/rect.c.html">src</a>
+
+<p>
+<h1><tt><a name="roots">roots(<i>p,x</i>)</a></tt></h1>
+Returns the values of x such that p(x)=0.
+The polynomial p should be factorable over integers.
+Returns a vector for multiple roots.
+<a href="src/roots.c.html">src</a>
+
+<p>
+<h1><tt><a name="simplify">simplify(<i>x</i>)</a></tt></h1>
+Returns x in a simpler form.
+<a href="src/simplify.c.html">src</a>
+
+<p>
+<h1><tt><a name="sin">sin(<i>x</i>)</a></tt></h1>
+Returns the sine of x.
+<a href="src/sin.c.html">src</a>
+
+<p>
+<h1><tt><a name="sinh">sinh(<i>x</i>)</a></tt></h1>
+Returns the hyperbolic sine of x.
+<a href="src/sinh.c.html">src</a>
+
+<p>
+<h1><tt><a name="sqrt">sqrt(<i>x</i>)</a></tt></h1>
+Returns the square root of x.
+<a href="src/eval.c.html#eval_sqrt">src</a>
+
+<p>
+<h1><tt><a name="stop">stop()</a></tt></h1>
+In a script, it does what it says.
+<a href="src/eval.c.html#eval_stop">src</a>
+
+<p>
+<h1><tt><a name="subst">subst(<i>a,b,c</i>)</a></tt></h1>
+Substitutes "a" for b in c and returns the result.
+<a href="src/subst.c.html">src</a>
+
+<p>
+<h1><tt><a name="sum">sum(<i>i,j,k,f</i>)</a></tt></h1>
+For i equals j through k evaluate f.
+Returns the sum of all f.
+<a href="src/sum.c.html">src</a>
+
+<p>
+<h1><tt><a name="tan">tan(<i>x</i>)</a></tt></h1>
+Returns the tangent of <i>x</i>.
+<a href="src/tan.c.html">src</a>
+
+<p>
+<h1><tt><a name="tanh">tanh(<i>x</i>)</a></tt></h1>
+Returns the hyperbolic tangent of <i>x</i>.
+<a href="src/tanh.c.html">src</a>
+
+<p>
+<h1><tt><a name="taylor">taylor(<i>f,x,n,a</i>)</a></tt></h1>
+Returns the Taylor expansion of f(x) around x=a.
+If "a" is omitted then a=0 is used.
+The argument n is the degree of the expansion.
+<a href="src/taylor.c.html">src</a>
+
+<p><h1><tt><a name="test">test(<i>a,b,c,d,...</i>)</a></tt></h1>
+If "a" is true then b is returned
+else if c is true then d is returned, etc.
+If the number of arguments is odd then the last argument is returned
+when all else fails.
+<a href="src/test.c.html">src</a>
+
+<p>
+<h1><tt><a name="transpose">transpose(<i>a,i,j</i>)</a></tt></h1>
+Returns the transpose of "a" with respect to indices i and j.
+If i and j are omitted then 1 and 2 are used.
+Hence a matrix can be transposed with a single argument.
+<a href="src/transpose.c.html">src</a>
+
+<p>
+<h1><tt><a name="unit">unit(<i>n</i>)</a></tt></h1>
+Returns an n by n identity matrix.
+<a href="src/eval.c.html#eval_unit">src</a>
+
+<p>
+<h1><tt><a name="zero">zero(<i>i,j,...</i>)</a></tt></h1>
+Returns a null tensor with dimensions i, j, etc.
+Useful for creating a tensor and then setting the component values.
+<a href="src/zero.c.html">src</a>
+
+</tt>
+</body>
+</html>
