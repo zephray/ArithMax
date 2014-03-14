@@ -43,6 +43,7 @@ qmul(void)
 
 	mfree(aa);
 	mfree(bb);
+        mfree(c);
 
 	push(p1);
 

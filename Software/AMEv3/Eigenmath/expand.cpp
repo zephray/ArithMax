@@ -92,7 +92,7 @@ expand(void)
 	push(B);
 	push(A);
 	push(X);
-	qdivpoly();
+	divpoly();
 	Q = pop();
 
 	// remainder B = B - A * Q

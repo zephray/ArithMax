@@ -23,7 +23,7 @@ void updateRandomUserObject();
 extern "C" void eigenmath_main()
 {
   LCD_Clear(0xffff); 
-  dPrintf("Welcome to Eigenmath\n");
+  dPrintf("ArithMax EV3\nOS 1.0.DEV\n");
   input_eval_loop();
 }
 
@@ -44,7 +44,9 @@ void input_eval_loop() {
       gc();
     } else {
       execution_in_progress = 1;
+      PM_SetCPUFreq(152);
       run(expr);
+      PM_SetCPUFreq(16);
       execution_in_progress = 0;     
     }
   }

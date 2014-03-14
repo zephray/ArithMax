@@ -6,5 +6,6 @@ extern "C" {
 #include "key.h"
 #include "spiflash.h"
 #include "usart.h"
+#include "powerman.h"
 }
 #endif

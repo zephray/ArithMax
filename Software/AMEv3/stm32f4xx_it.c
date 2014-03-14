@@ -27,6 +27,8 @@
 #include "stn.h"
 #include "pccon.h"
 #include "key.h"
+    
+uint16_t Timing=0;
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -133,6 +135,21 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   TimingDelay_Decrement();
+  if (LCD_FB_Touched)
+  {
+    LCD_RealUpdate(Timing%50);
+    LCD_FB_Touched =0;
+  }
+  Timing++;
+  if (Timing==100)
+  {
+    LCD_RealUpdate(1);
+    Timing=0;
+  }
+  else if (Timing==50)
+  {
+    LCD_RealUpdate(0);
+  }
 }
 
 /******************************************************************************/
@@ -206,7 +223,7 @@ void TIM2_IRQHandler(void)
       {
         LCD_DispBmp1bpp(0,0,96-1,32-1,(unsigned char *)gImage_mainlogo);
         LCD_StatusClear();
-        LCD_Update();
+        LCD_RealUpdate(0);
         DelayUs(100000);
         DelayUs(100000);
         DelayUs(100000);

@@ -174,10 +174,11 @@ void dConsoleCls ()
 }*/
 void printCursor() {
   int x = myconsolex*6;
-  int y = myconsoley*8;
+  int y = myconsoley;
   // vertical cursor...
   //LCD_Line(x, y+7, x, y, 1);
   //LCD_Line(x+1, y+7, x+1, y, 1); 
+  LCD_CursorSet(x,y);
 }
 // inserts into subject at position pos. assumes subject has enough space!
 //append(s, (char*)"tan(", pos);
@@ -229,6 +230,8 @@ int dGetLine (char * s,int max) // This function is depended on dConsole
         x = l + 1;
         y = line_count;
         width = LINE_COL_MAX - l;
+        
+        LCD_CursorEn(1);
 
         while (1)
         {
@@ -398,24 +401,36 @@ int dGetLine (char * s,int max) // This function is depended on dConsole
                       pos=pos+len; refresh = 1;
                     }
                   }*/
+                  LCD_CursorEn(0);
+                  LCD_SelectFont((u8 *)Font_Ascii_5X7E_Menu);
                   Mode_main();
                   LCD_Clear(0);
+                  LCD_SelectFont((u8 *)Font_Ascii_5X7E);
                   dConsoleRedraw();
+                  LCD_CursorEn(1);
                   refresh = 1;
                 } else if (key==KEY_CTRL_SETUP) {
+                  LCD_CursorEn(0);
+                  LCD_SelectFont((u8 *)Font_Ascii_5X7E_Menu);
                   Setup_main();
                   LCD_Clear(0);
+                  LCD_SelectFont((u8 *)Font_Ascii_5X7E);
                   dConsoleRedraw();
+                  LCD_CursorEn(1);
                   refresh = 1;
                 } else if (key==KEY_CTRL_UP) {
                   // go up in command history
-                  do_up_arrow();
-                  pos=strlen(s);
-                  refresh = 1;
+                  //do_up_arrow();
+                  //line_start--;
+                  //dConsoleRedraw();
+                  //pos=strlen(s);
+                  //refresh = 1;
                 } else if (key==KEY_CTRL_DOWN) {
                   // go down in command history
-                  do_down_arrow();
-                  pos=strlen(s);
+                  //do_down_arrow();
+                  //line_start++;
+                  //dConsoleRedraw();
+                  //pos=strlen(s);
                   refresh = 1;
                 } else if (key==KEY_CTRL_LEFT) {
                   // move cursor left
@@ -452,7 +467,11 @@ int dGetLine (char * s,int max) // This function is depended on dConsole
                         pos             = 0;
                         refresh = 1;
                 }
-                else if (key==KEY_CTRL_EXE) return 1;
+                else if (key==KEY_CTRL_EXE) 
+                {
+                  LCD_CursorEn(0);
+                  return 1;
+                }
         }
         return 0;
 }

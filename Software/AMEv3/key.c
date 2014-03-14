@@ -153,6 +153,13 @@ void WaitForKey(void)
   }
 }
 
+void WaitForCertainKey(u8 ck)
+{
+  u8 key=255;
+  while (key!=ck)
+    key=GetKey();
+}
+
 unsigned char GetKey(void)
 {
   uint8_t key=255;

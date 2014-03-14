@@ -1,5 +1,6 @@
 #include "powerman.h"
 #include "stn.h"
+#include "spiflash.h"
 
 void PM_Config()
 {
@@ -12,6 +13,55 @@ void PM_Config()
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_Init(GPIOC,&GPIO_InitStructure);
   GPIOC->BSRRH = GPIO_Pin_2;
+}
+
+void PM_SetCPUFreq(uint8_t freq)
+{
+  //PLL_VCO = (HSE_VALUE or HSI_VALUE / PLL_M) * PLL_N
+  u8 PLL_M=8;
+  u8 PLL_N=120;
+  //SYSCLK = PLL_VCO / PLL_P
+  u8 PLL_P=2;
+  //USB OTG FS, SDIO and RNG Clock =  PLL_VCO / PLLQ
+  u8 PLL_Q=5;
+  RCC_ClocksTypeDef RCC_Clocks;
+  
+  //选择HSI为时钟源
+  RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+  RCC->CFGR |= RCC_CFGR_SW_HSI;
+  //等待时钟源被选择为HSI
+  while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_HSI);
+  if (freq!=16)//如果需要使用PLL
+  {
+    PLL_N=freq/2;
+    //关闭主PLL
+    RCC->CR &= (uint32_t)((uint32_t)~(RCC_CR_PLLON));
+    //配置主PLL
+    RCC->PLLCFGR = PLL_M | (PLL_N << 6) | (((PLL_P >> 1) -1) << 16) |
+                 (RCC_PLLCFGR_PLLSRC_HSI) | (PLL_Q << 24);
+    //启用主PLL
+    RCC->CR |= RCC_CR_PLLON;
+    //等待PLL准备好
+    while((RCC->CR & RCC_CR_PLLRDY) == 0);
+    //启用FLASH预读，I/D-Cache，配置Flash等待
+    FLASH->ACR = FLASH_ACR_PRFTEN |FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_3WS;
+    //将时钟源选为PLL
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+    RCC->CFGR |= RCC_CFGR_SW_PLL;
+    //等待主时钟源被切换成PLL
+    while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_PLL);
+  }
+  else//如果时钟为16MHz
+  {
+    //关闭主PLL
+    RCC->CR &= (uint32_t)((uint32_t)~(RCC_CR_PLLON));
+    //启用FLASH预读，I/D-Cache，配置Flash等待
+    FLASH->ACR = FLASH_ACR_PRFTEN |FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_0WS;
+  }
+  SystemCoreClockUpdate();
+  //重新配置SysTick
+  RCC_GetClocksFreq(&RCC_Clocks);
+  SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
 }
 
 void PM_AdcInit()
@@ -99,6 +149,7 @@ void PM_EnterStopMode()
 void PM_EnterStandbyMode()
 {
   LCD_PowerSave();
+  SPI_Flash_PowerDown();
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR,ENABLE);
   PWR_WakeUpPinCmd(ENABLE);
   SCB->SCR|=1<<2;//使能SLEEPDEEP位 (SYS->CTRL)

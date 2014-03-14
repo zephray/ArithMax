@@ -10,6 +10,7 @@
 #define LCD_C   *(vu16*)((u32)0x60000000)	 //disp Reg  ADDR
 
 extern uint8_t LCD_FB[96*32/8]; //LCD Framebuffer 
+extern uint8_t LCD_FB_Touched;
 
 #define LCD_STB_Shift   1
 #define LCD_STB_Alpha   5
@@ -32,12 +33,19 @@ extern uint8_t LCD_FB[96*32/8]; //LCD Framebuffer
    
 u32 mypow(u8 m,u8 n);
 
+void LCD_WriteCmd(u16 index);
+void LCD_WriteDat(u16 val);
+
 void LCD_Init(void);
 void LCD_PowerSave();
 void LCD_Update();
+void LCD_RealUpdate(uint8_t CursorState);//Do not call!
 void LCD_StatusSet(unsigned char id,unsigned char status);
+void LCD_CursorSet(uint8_t x,uint8_t y);
+void LCD_CursorEn(uint8_t en);
 void LCD_DispBmp(u8 x0,u8 y0,u8 x1,u8 y1,u8 *pic);
 void LCD_Fill(u8 x0,u8 y0,u8 x1,u8 y1,u8 c);
+void LCD_SelectFont(u8* font);
 void LCD_Display_ASCII_8X16_Chr(u16 left,u16 top,u8 chr,u16 color);
 void LCD_Display_ASCII_5X7_Chr(u16 left,u16 top,u8 chr,u16 color);
 void LCD_Display_ASCII_8X16(u16 left,u16 top,u8 *s,u16 color);

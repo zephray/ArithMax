@@ -504,7 +504,7 @@ void integral_of_form(void);
 void inv(void);
 void invg(void);
 void yyinvg(void);
-void idecomp(int n);
+void decomp(int n);
 
 // is.cpp
 int iszero(U *p);
@@ -596,7 +596,6 @@ void yymag(void);
 void test_mag(void);
 
 // main.cpp
-void main();
 void clear_term();
 void eval_display(void);
 void printstr(char *s);
@@ -794,7 +793,7 @@ void test_quickfactor(void);
 
 // quotient.cpp
 void eval_quotient(void);
-void qdivpoly(void);
+void divpoly(void);
 void test_quotient(void);
 
 // rationalize.cpp

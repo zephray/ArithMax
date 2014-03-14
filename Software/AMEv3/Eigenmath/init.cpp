@@ -46,8 +46,6 @@ init(void)
 	std_symbol("arctanh", ARCTANH);
 	std_symbol("arg", ARG);
 	std_symbol("atomize", ATOMIZE);
-	std_symbol("besselj", BESSELJ);
-	std_symbol("bessely", BESSELY);
 	std_symbol("binding", BINDING);
 	std_symbol("binomial", BINOMIAL);
 	std_symbol("ceiling", CEILING);

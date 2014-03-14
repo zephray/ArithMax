@@ -69,8 +69,6 @@ enum {
 	ARCTANH,
 	ARG,
 	ATOMIZE,
-	BESSELJ,
-	BESSELY,
 	BINDING,
 	BINOMIAL,
 	CEILING,
@@ -230,7 +228,7 @@ enum {
 
 #define BUF 4000
 
-#define MAX_PROGRAM_SIZE 1001
+#define MAX_PROGRAM_SIZE 10001
 #define MAXPRIMETAB 10000
 
 #define M_PI 3.14159265358979323846
@@ -317,7 +315,7 @@ extern int fmt_x;
 extern int fmt_index;
 extern int fmt_level;
 extern int verbosing;
-extern int primetab[MAXPRIMETAB];
+extern const int primetab[MAXPRIMETAB];
 extern int esc_flag;
 extern int draw_flag;
 extern int mtotal;

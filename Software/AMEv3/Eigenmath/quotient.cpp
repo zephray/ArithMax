@@ -20,7 +20,7 @@ eval_quotient(void)
 		p1 = symbol(SYMBOL_X);
 	push(p1);
 
-	qdivpoly();
+	divpoly();
 }
 
 //-----------------------------------------------------------------------------
@@ -44,7 +44,7 @@ eval_quotient(void)
 #define QUOTIENT p5
 
 void
-qdivpoly(void)
+divpoly(void)
 {
 	int h, i, m, n, x;
 	U **dividend, **divisor;

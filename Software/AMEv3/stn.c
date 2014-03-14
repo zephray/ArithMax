@@ -7,7 +7,9 @@
 uint8_t mode=1;//1=¸²¸Ç
 
 uint8_t LCD_FB[96*32/8];
+uint8_t CursorX,CursorY,CursorEn=0;
 uint8_t m=1;
+uint8_t LCD_FB_Touched = 0;
 
 uint8_t *Curr_Font;
 
@@ -133,7 +135,7 @@ void LCD_GPIO_Config(void)
 
 }
 
-static void LCD_Rst(void)
+void LCD_Rst(void)
 {			
     GPIO_ResetBits(GPIOC, GPIO_Pin_3);
     Delay(1);					   
@@ -148,7 +150,7 @@ static void LCD_Rst(void)
  * ??  :-index ???
  * ??  :????
  */
-static void LCD_WriteCmd(u16 index)
+void LCD_WriteCmd(u16 index)
 {
     //*(__IO u16 *) (Bank1_LCD_C) = index;
 		LCD_C = index;
@@ -162,7 +164,7 @@ static void LCD_WriteCmd(u16 index)
  * ??  :-index ???
  *         -val   ?????
  */
-static void LCD_WriteReg(u16 index, u16 val)
+void LCD_WriteReg(u16 index, u16 val)
 {	
     //*(__IO u16 *) (Bank1_LCD_C) = index;	
     //*(__IO u16 *) (Bank1_LCD_D) = val;
@@ -177,13 +179,13 @@ static void LCD_WriteReg(u16 index, u16 val)
  * ??  :?ILI9325 GRAM ????
  * ??  :-val ?????,16bit        
  */
-static void LCD_WriteDat(unsigned int val)
+void LCD_WriteDat(u16 val)
 {   
     //*(__IO u16 *) (Bank1_LCD_D) = val; 	
 		LCD_D = val;
 }
 
-static unsigned short LCD_ReadReg(unsigned char reg_addr)
+unsigned short LCD_ReadReg(unsigned char reg_addr)
 {
     unsigned short val=0;
     LCD_WriteCmd(reg_addr);
@@ -197,7 +199,7 @@ static unsigned short LCD_ReadReg(unsigned char reg_addr)
  * ??  :? ILI9325 RAM ??
  * ??  :?????,16bit *         
  */
-static u16 LCD_ReadDat(void)
+u16 LCD_ReadDat(void)
 {
     u16 a = 0;
     //a = (*(__IO u16 *) (Bank1_LCD_D)); 	//Dummy	
@@ -289,7 +291,26 @@ void LCD_Clear(u8 c)
 
 void LCD_Update()
 {
-  unsigned char i,j;
+  LCD_FB_Touched = 1;
+}
+
+void LCD_CursorSet(uint8_t x,uint8_t y)
+{
+  if ((x<96)&&(y<4))
+  {
+    CursorX = x;
+    CursorY = y;
+  }
+}
+
+void LCD_CursorEn(uint8_t en)
+{
+  CursorEn = en;
+}
+
+void LCD_RealUpdate(uint8_t CursorState)//Do not call!
+{
+  unsigned char i,j,rx;
   for (i=0;i<4;i++)
   {
     LCD_WriteCmd(0xee);
@@ -299,6 +320,18 @@ void LCD_Update()
     LCD_WriteCmd(0xe0); 
     for (j=0;j<96;j++)
       LCD_WriteDat(LCD_FB[i*96+j]);
+  }
+  LCD_FB_Touched = 0;
+  if ((CursorEn)&&(CursorState))
+  {
+    rx=CursorX+36;
+    LCD_WriteCmd(0xee);
+    LCD_WriteCmd(0xb0|(3-CursorY));
+    LCD_WriteCmd(0x10|(rx>>4));
+    LCD_WriteCmd(0x00|(rx&0x0f));
+    LCD_WriteCmd(0xe0);
+    LCD_WriteDat(0xFF);
+    LCD_WriteDat(0xFF);
   }
 }
 

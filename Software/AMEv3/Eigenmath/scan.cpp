@@ -515,7 +515,7 @@ get_token(void)
 
 	// comment?
 
-	if (*scan_str == '#' || *scan_str == '-' && scan_str[1] == '-') {
+	if (*scan_str == '#' || (*scan_str == '-' && scan_str[1] == '-')) {
 		while (*scan_str && *scan_str != '\n' && *scan_str != '\r')
 			scan_str++;
 		if (*scan_str)

@@ -115,7 +115,7 @@ yyinvg(void)
 	for (i = 0; i < n * n; i++)
 		push(p1->u.tensor->elem[i]);
 
-	idecomp(n);
+	decomp(n);
 
 	p1 = alloc_tensor(n * n);
 
@@ -149,7 +149,7 @@ yyinvg(void)
 #define U(i, j) stack[u + n * (i) + (j)]
 
 void
-idecomp(int n)
+decomp(int n)
 {
 	int a, d, i, j, u;
 
