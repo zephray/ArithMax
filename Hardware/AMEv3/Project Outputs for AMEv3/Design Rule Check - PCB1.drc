@@ -1,0 +1,448 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Administrator\Documents\ArithMaxE-STM32\PCB1.PcbDoc
+Date     : 2014/1/27
+Time     : 16:25:56
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad CON200-6(6789.37mil,2673.228mil)  Multi-Layer on Net NetCON200_6
+   Pad CON200-7(6789.37mil,2830.709mil)  Multi-Layer on Net NetCON200_6
+
+Processing Rule : Room SheetMain (Bounding Region = (4475mil, 1000mil, 7000mil, 4787.402mil) (InComponentClass('SheetMain'))
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net WL_IRQ Between Pad U1-15 (5408.465,2023.622mil) And Pad U600-8 (5466.142,1117.559mil)
+   Violation between Un-Routed Net Constraint: Net WL_CSN Between Pad U600-4 (5466.142,1317.559mil) And Pad U1-77 (5921.26,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net WL_CE Between Pad U1-16 (5408.465,2003.937mil) And Pad U600-3 (5466.142,1367.559mil)
+   Violation between Un-Routed Net Constraint: Net VPH Between Pad U600-1 (5466.142,1467.559mil) And Pad CON300-4 (6423.228,1848.425mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-22 (5408.465,1885.827mil) And Pad U1-21 (5408.465,1905.512mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-21 (5408.465,1905.512mil) And Pad U1-19 (5408.465,1944.882mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-11 (5408.465,2102.362mil) And Pad U1-6 (5408.465,2200.787mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-22 (5408.465,1885.827mil) And Pad U1-28 (5507.874,1766.732mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-6 (5408.465,2200.787mil) And Pad U1-100 (5468.504,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-28 (5507.874,1766.732mil) And Pad U1-50 (5940.945,1766.732mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-100 (5468.504,2359.252mil) And Pad U1-75 (6000.984,2299.213mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-75 (6000.984,2299.213mil) And Pad LCD-1 (6161.417,4496.063mil)
+   Violation between Un-Routed Net Constraint: Net VDD Between Pad U1-19 (5408.465,1944.882mil) And Pad U1-11 (5408.465,2102.362mil)
+   Violation between Un-Routed Net Constraint: Net SPI3_MOSI Between Pad U600-6 (5466.142,1217.559mil) And Pad U1-91 (5645.669,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net SPI3_MISO Between Pad U600-7 (5466.142,1167.559mil) And Pad U1-90 (5665.354,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net SPI3_CLK Between Pad U600-5 (5466.142,1267.559mil) And Pad U1-89 (5685.039,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net SDIO_D3 Between Pad U1-79 (5881.89,2359.252mil) And Pad CON300-2 (6423.228,1935.04mil)
+   Violation between Un-Routed Net Constraint: Net SDIO_D2 Between Pad U1-78 (5901.575,2359.252mil) And Pad CON300-1 (6423.228,1978.347mil)
+   Violation between Un-Routed Net Constraint: Net SDIO_D1 Between Pad U1-66 (6000.984,2122.047mil) And Pad CON300-7 (6423.228,1718.504mil)
+   Violation between Un-Routed Net Constraint: Net SDIO_D0 Between Pad U1-65 (6000.984,2102.362mil) And Pad CON300-8 (6423.228,1675.197mil)
+   Violation between Un-Routed Net Constraint: Net SDIO_CMD Between Pad U1-83 (5803.15,2359.252mil) And Pad CON300-3 (6423.228,1891.733mil)
+   Violation between Un-Routed Net Constraint: Net SDIO_CK Between Pad U1-80 (5862.205,2359.252mil) And Pad CON300-5 (6423.228,1805.118mil)
+   Violation between Un-Routed Net Constraint: Net OSC_OUT Between Pad C16-1 (5255.906,1940.945mil) And Track on layer Top Layer (5273.101,1971.252mil)
+   Violation between Un-Routed Net Constraint: Net OSC_IN Between Pad C15-1 (5251.968,2019.685mil) And Track on layer Top Layer (5267.717,1984.252mil)
+   Violation between Un-Routed Net Constraint: Net NetCON200_6 Between Pad CON200-6 [Unplated] (6789.37,2673.228mil) And Pad CON200-8 (6862.205,2596.457mil)
+   Violation between Un-Routed Net Constraint: Net NetCON200_6 Between Pad CON200-7 [Unplated] (6789.37,2830.709mil) And Pad CON200-9 (6862.205,2907.48mil)
+   Violation between Un-Routed Net Constraint: Net NetCON200_6 Between Pad CON200-6 [Unplated] (6789.37,2673.228mil) And Pad CON200-7 [Unplated] (6789.37,2830.709mil)
+   Violation between Un-Routed Net Constraint: Unplated Pad CON200-6(6789.37mil,2673.228mil)  Multi-Layer
+   Violation between Un-Routed Net Constraint: Unplated Pad CON200-7(6789.37mil,2830.709mil)  Multi-Layer
+   Violation between Un-Routed Net Constraint: Net LCD_RST Between Pad LCD-27 (5342.519,4496.063mil) And Pad U1-18 (5408.465,1964.567mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C18-2 (5157.48,2110.236mil) And Pad C15-2 (5196.85,2019.685mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C16-2 (5255.906,1885.827mil) And Pad U1-20 (5408.465,1925.197mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-20 (5408.465,1925.197mil) And Pad U1-10 (5408.465,2122.047mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-20 (5408.465,1925.197mil) And Pad U1-27 (5488.189,1766.732mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-10 (5408.465,2122.047mil) And Pad U1-99 (5488.189,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U600-2 (5466.142,1417.559mil) And Pad U1-27 (5488.189,1766.732mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-99 (5488.189,2359.252mil) And Pad U1-74 (6000.984,2279.528mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-27 (5488.189,1766.732mil) And Pad CON300-6 (6423.228,1761.811mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-74 (6000.984,2279.528mil) And Pad CON200-5 (6768.701,2803.15mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Track on layer Top Layer (6271.654,4271.654mil) And Pad CON200-5 (6768.701,2803.15mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C15-2 (5196.85,2019.685mil) And Pad C16-2 (5255.906,1885.827mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_NWE Between Pad LCD-25 (5405.511,4496.063mil) And Pad U1-86 (5744.095,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_NOE Between Pad LCD-24 (5437.007,4496.063mil) And Pad U1-85 (5763.78,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_NE1 Between Pad LCD-28 (5311.023,4496.063mil) And Pad U1-88 (5704.724,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_D7 Between Pad LCD-16 (5688.976,4496.063mil) And Pad U1-41 (5763.78,1766.732mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_D6 Between Pad LCD-17 (5657.48,4496.063mil) And Pad U1-40 (5744.095,1766.732mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_D5 Between Pad LCD-18 (5625.984,4496.063mil) And Pad U1-39 (5724.409,1766.732mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_D4 Between Pad LCD-19 (5594.488,4496.063mil) And Pad U1-38 (5704.724,1766.732mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_D3 Between Pad LCD-20 (5562.991,4496.063mil) And Pad U1-82 (5822.835,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_D2 Between Pad LCD-21 (5531.495,4496.063mil) And Pad U1-81 (5842.52,2359.252mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_D1 Between Pad LCD-22 (5499.999,4496.063mil) And Pad U1-62 (6000.984,2043.307mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_D0 Between Pad LCD-23 (5468.503,4496.063mil) And Pad U1-61 (6000.984,2023.622mil)
+   Violation between Un-Routed Net Constraint: Net FSMC_A16 Between Pad LCD-26 (5374.015,4496.063mil) And Pad U1-58 (6000.984,1964.567mil)
+Rule Violations :53
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+   Violation between Pad CON200-1(6768.701mil,2700.787mil)  Top Layer and 
+                     Pad CON200-6(6789.37mil,2673.228mil)  Multi-Layer
+   Violation between Pad CON200-5(6768.701mil,2803.15mil)  Top Layer and 
+                     Pad CON200-7(6789.37mil,2830.709mil)  Multi-Layer
+Rule Violations :2
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=20mil) (Preferred=7mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+   Violation between Hole Size Constraint: Pad Free-0(4868.701mil,4291.339mil)  Multi-Layer
+   Violation between Hole Size Constraint: Pad Free-0(6606.299mil,4291.339mil)  Multi-Layer
+Rule Violations :2
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+   Violation between Pad CON200-2(6768.701mil,2726.378mil)  Top Layer and 
+                     Pad CON200-1(6768.701mil,2700.787mil)  Top Layer
+   Violation between Pad CON200-3(6768.701mil,2751.968mil)  Top Layer and 
+                     Pad CON200-2(6768.701mil,2726.378mil)  Top Layer
+   Violation between Pad CON200-4(6768.701mil,2777.559mil)  Top Layer and 
+                     Pad CON200-3(6768.701mil,2751.968mil)  Top Layer
+   Violation between Pad CON200-5(6768.701mil,2803.15mil)  Top Layer and 
+                     Pad CON200-4(6768.701mil,2777.559mil)  Top Layer
+   Violation between Pad LCD-2(6129.921mil,4496.063mil)  Top Layer and 
+                     Pad LCD-1(6161.417mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-3(6098.425mil,4496.063mil)  Top Layer and 
+                     Pad LCD-2(6129.921mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-4(6066.929mil,4496.063mil)  Top Layer and 
+                     Pad LCD-3(6098.425mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-5(6035.433mil,4496.063mil)  Top Layer and 
+                     Pad LCD-4(6066.929mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-6(6003.937mil,4496.063mil)  Top Layer and 
+                     Pad LCD-5(6035.433mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-7(5972.441mil,4496.063mil)  Top Layer and 
+                     Pad LCD-6(6003.937mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-8(5940.945mil,4496.063mil)  Top Layer and 
+                     Pad LCD-7(5972.441mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-9(5909.449mil,4496.063mil)  Top Layer and 
+                     Pad LCD-8(5940.945mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-10(5877.952mil,4496.063mil)  Top Layer and 
+                     Pad LCD-9(5909.449mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-11(5846.456mil,4496.063mil)  Top Layer and 
+                     Pad LCD-10(5877.952mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-12(5814.96mil,4496.063mil)  Top Layer and 
+                     Pad LCD-11(5846.456mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-13(5783.464mil,4496.063mil)  Top Layer and 
+                     Pad LCD-12(5814.96mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-14(5751.968mil,4496.063mil)  Top Layer and 
+                     Pad LCD-13(5783.464mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-15(5720.472mil,4496.063mil)  Top Layer and 
+                     Pad LCD-14(5751.968mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-16(5688.976mil,4496.063mil)  Top Layer and 
+                     Pad LCD-15(5720.472mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-17(5657.48mil,4496.063mil)  Top Layer and 
+                     Pad LCD-16(5688.976mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-18(5625.984mil,4496.063mil)  Top Layer and 
+                     Pad LCD-17(5657.48mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-19(5594.488mil,4496.063mil)  Top Layer and 
+                     Pad LCD-18(5625.984mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-20(5562.991mil,4496.063mil)  Top Layer and 
+                     Pad LCD-19(5594.488mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-21(5531.495mil,4496.063mil)  Top Layer and 
+                     Pad LCD-20(5562.991mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-22(5499.999mil,4496.063mil)  Top Layer and 
+                     Pad LCD-21(5531.495mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-23(5468.503mil,4496.063mil)  Top Layer and 
+                     Pad LCD-22(5499.999mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-24(5437.007mil,4496.063mil)  Top Layer and 
+                     Pad LCD-23(5468.503mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-25(5405.511mil,4496.063mil)  Top Layer and 
+                     Pad LCD-24(5437.007mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-26(5374.015mil,4496.063mil)  Top Layer and 
+                     Pad LCD-25(5405.511mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-27(5342.519mil,4496.063mil)  Top Layer and 
+                     Pad LCD-26(5374.015mil,4496.063mil)  Top Layer
+   Violation between Pad LCD-28(5311.023mil,4496.063mil)  Top Layer and 
+                     Pad LCD-27(5342.519mil,4496.063mil)  Top Layer
+   Violation between Pad U1-2(5408.465mil,2279.528mil)  Top Layer and 
+                     Pad U1-1(5408.465mil,2299.213mil)  Top Layer
+   Violation between Pad U1-3(5408.465mil,2259.843mil)  Top Layer and 
+                     Pad U1-2(5408.465mil,2279.528mil)  Top Layer
+   Violation between Pad U1-4(5408.465mil,2240.157mil)  Top Layer and 
+                     Pad U1-3(5408.465mil,2259.843mil)  Top Layer
+   Violation between Pad U1-5(5408.465mil,2220.472mil)  Top Layer and 
+                     Pad U1-4(5408.465mil,2240.157mil)  Top Layer
+   Violation between Pad U1-6(5408.465mil,2200.787mil)  Top Layer and 
+                     Pad U1-5(5408.465mil,2220.472mil)  Top Layer
+   Violation between Pad U1-7(5408.465mil,2181.102mil)  Top Layer and 
+                     Pad U1-6(5408.465mil,2200.787mil)  Top Layer
+   Violation between Pad U1-8(5408.465mil,2161.417mil)  Top Layer and 
+                     Pad U1-7(5408.465mil,2181.102mil)  Top Layer
+   Violation between Pad U1-9(5408.465mil,2141.732mil)  Top Layer and 
+                     Pad U1-8(5408.465mil,2161.417mil)  Top Layer
+   Violation between Pad U1-10(5408.465mil,2122.047mil)  Top Layer and 
+                     Pad U1-9(5408.465mil,2141.732mil)  Top Layer
+   Violation between Pad U1-11(5408.465mil,2102.362mil)  Top Layer and 
+                     Pad U1-10(5408.465mil,2122.047mil)  Top Layer
+   Violation between Pad U1-12(5408.465mil,2082.677mil)  Top Layer and 
+                     Pad U1-11(5408.465mil,2102.362mil)  Top Layer
+   Violation between Pad U1-13(5408.465mil,2062.992mil)  Top Layer and 
+                     Pad U1-12(5408.465mil,2082.677mil)  Top Layer
+   Violation between Pad U1-14(5408.465mil,2043.307mil)  Top Layer and 
+                     Pad U1-13(5408.465mil,2062.992mil)  Top Layer
+   Violation between Pad U1-15(5408.465mil,2023.622mil)  Top Layer and 
+                     Pad U1-14(5408.465mil,2043.307mil)  Top Layer
+   Violation between Pad U1-16(5408.465mil,2003.937mil)  Top Layer and 
+                     Pad U1-15(5408.465mil,2023.622mil)  Top Layer
+   Violation between Pad U1-17(5408.465mil,1984.252mil)  Top Layer and 
+                     Pad U1-16(5408.465mil,2003.937mil)  Top Layer
+   Violation between Pad U1-18(5408.465mil,1964.567mil)  Top Layer and 
+                     Pad U1-17(5408.465mil,1984.252mil)  Top Layer
+   Violation between Pad U1-19(5408.465mil,1944.882mil)  Top Layer and 
+                     Pad U1-18(5408.465mil,1964.567mil)  Top Layer
+   Violation between Pad U1-20(5408.465mil,1925.197mil)  Top Layer and 
+                     Pad U1-19(5408.465mil,1944.882mil)  Top Layer
+   Violation between Pad U1-21(5408.465mil,1905.512mil)  Top Layer and 
+                     Pad U1-20(5408.465mil,1925.197mil)  Top Layer
+   Violation between Pad U1-22(5408.465mil,1885.827mil)  Top Layer and 
+                     Pad U1-21(5408.465mil,1905.512mil)  Top Layer
+   Violation between Pad U1-23(5408.465mil,1866.142mil)  Top Layer and 
+                     Pad U1-22(5408.465mil,1885.827mil)  Top Layer
+   Violation between Pad U1-24(5408.465mil,1846.457mil)  Top Layer and 
+                     Pad U1-23(5408.465mil,1866.142mil)  Top Layer
+   Violation between Pad U1-25(5408.465mil,1826.772mil)  Top Layer and 
+                     Pad U1-24(5408.465mil,1846.457mil)  Top Layer
+   Violation between Pad U1-27(5488.189mil,1766.732mil)  Top Layer and 
+                     Pad U1-26(5468.504mil,1766.732mil)  Top Layer
+   Violation between Pad U1-28(5507.874mil,1766.732mil)  Top Layer and 
+                     Pad U1-27(5488.189mil,1766.732mil)  Top Layer
+   Violation between Pad U1-29(5527.559mil,1766.732mil)  Top Layer and 
+                     Pad U1-28(5507.874mil,1766.732mil)  Top Layer
+   Violation between Pad U1-30(5547.244mil,1766.732mil)  Top Layer and 
+                     Pad U1-29(5527.559mil,1766.732mil)  Top Layer
+   Violation between Pad U1-31(5566.929mil,1766.732mil)  Top Layer and 
+                     Pad U1-30(5547.244mil,1766.732mil)  Top Layer
+   Violation between Pad U1-32(5586.614mil,1766.732mil)  Top Layer and 
+                     Pad U1-31(5566.929mil,1766.732mil)  Top Layer
+   Violation between Pad U1-33(5606.299mil,1766.732mil)  Top Layer and 
+                     Pad U1-32(5586.614mil,1766.732mil)  Top Layer
+   Violation between Pad U1-34(5625.984mil,1766.732mil)  Top Layer and 
+                     Pad U1-33(5606.299mil,1766.732mil)  Top Layer
+   Violation between Pad U1-35(5645.669mil,1766.732mil)  Top Layer and 
+                     Pad U1-34(5625.984mil,1766.732mil)  Top Layer
+   Violation between Pad U1-36(5665.354mil,1766.732mil)  Top Layer and 
+                     Pad U1-35(5645.669mil,1766.732mil)  Top Layer
+   Violation between Pad U1-37(5685.039mil,1766.732mil)  Top Layer and 
+                     Pad U1-36(5665.354mil,1766.732mil)  Top Layer
+   Violation between Pad U1-38(5704.724mil,1766.732mil)  Top Layer and 
+                     Pad U1-37(5685.039mil,1766.732mil)  Top Layer
+   Violation between Pad U1-39(5724.409mil,1766.732mil)  Top Layer and 
+                     Pad U1-38(5704.724mil,1766.732mil)  Top Layer
+   Violation between Pad U1-40(5744.095mil,1766.732mil)  Top Layer and 
+                     Pad U1-39(5724.409mil,1766.732mil)  Top Layer
+   Violation between Pad U1-41(5763.78mil,1766.732mil)  Top Layer and 
+                     Pad U1-40(5744.095mil,1766.732mil)  Top Layer
+   Violation between Pad U1-42(5783.465mil,1766.732mil)  Top Layer and 
+                     Pad U1-41(5763.78mil,1766.732mil)  Top Layer
+   Violation between Pad U1-43(5803.15mil,1766.732mil)  Top Layer and 
+                     Pad U1-42(5783.465mil,1766.732mil)  Top Layer
+   Violation between Pad U1-44(5822.835mil,1766.732mil)  Top Layer and 
+                     Pad U1-43(5803.15mil,1766.732mil)  Top Layer
+   Violation between Pad U1-45(5842.52mil,1766.732mil)  Top Layer and 
+                     Pad U1-44(5822.835mil,1766.732mil)  Top Layer
+   Violation between Pad U1-46(5862.205mil,1766.732mil)  Top Layer and 
+                     Pad U1-45(5842.52mil,1766.732mil)  Top Layer
+   Violation between Pad U1-47(5881.89mil,1766.732mil)  Top Layer and 
+                     Pad U1-46(5862.205mil,1766.732mil)  Top Layer
+   Violation between Pad U1-48(5901.575mil,1766.732mil)  Top Layer and 
+                     Pad U1-47(5881.89mil,1766.732mil)  Top Layer
+   Violation between Pad U1-49(5921.26mil,1766.732mil)  Top Layer and 
+                     Pad U1-48(5901.575mil,1766.732mil)  Top Layer
+   Violation between Pad U1-50(5940.945mil,1766.732mil)  Top Layer and 
+                     Pad U1-49(5921.26mil,1766.732mil)  Top Layer
+   Violation between Pad U1-52(6000.984mil,1846.457mil)  Top Layer and 
+                     Pad U1-51(6000.984mil,1826.772mil)  Top Layer
+   Violation between Pad U1-53(6000.984mil,1866.142mil)  Top Layer and 
+                     Pad U1-52(6000.984mil,1846.457mil)  Top Layer
+   Violation between Pad U1-54(6000.984mil,1885.827mil)  Top Layer and 
+                     Pad U1-53(6000.984mil,1866.142mil)  Top Layer
+   Violation between Pad U1-55(6000.984mil,1905.512mil)  Top Layer and 
+                     Pad U1-54(6000.984mil,1885.827mil)  Top Layer
+   Violation between Pad U1-56(6000.984mil,1925.197mil)  Top Layer and 
+                     Pad U1-55(6000.984mil,1905.512mil)  Top Layer
+   Violation between Pad U1-57(6000.984mil,1944.882mil)  Top Layer and 
+                     Pad U1-56(6000.984mil,1925.197mil)  Top Layer
+   Violation between Pad U1-58(6000.984mil,1964.567mil)  Top Layer and 
+                     Pad U1-57(6000.984mil,1944.882mil)  Top Layer
+   Violation between Pad U1-59(6000.984mil,1984.252mil)  Top Layer and 
+                     Pad U1-58(6000.984mil,1964.567mil)  Top Layer
+   Violation between Pad U1-60(6000.984mil,2003.937mil)  Top Layer and 
+                     Pad U1-59(6000.984mil,1984.252mil)  Top Layer
+   Violation between Pad U1-61(6000.984mil,2023.622mil)  Top Layer and 
+                     Pad U1-60(6000.984mil,2003.937mil)  Top Layer
+   Violation between Pad U1-62(6000.984mil,2043.307mil)  Top Layer and 
+                     Pad U1-61(6000.984mil,2023.622mil)  Top Layer
+   Violation between Pad U1-63(6000.984mil,2062.992mil)  Top Layer and 
+                     Pad U1-62(6000.984mil,2043.307mil)  Top Layer
+   Violation between Pad U1-64(6000.984mil,2082.677mil)  Top Layer and 
+                     Pad U1-63(6000.984mil,2062.992mil)  Top Layer
+   Violation between Pad U1-65(6000.984mil,2102.362mil)  Top Layer and 
+                     Pad U1-64(6000.984mil,2082.677mil)  Top Layer
+   Violation between Pad U1-66(6000.984mil,2122.047mil)  Top Layer and 
+                     Pad U1-65(6000.984mil,2102.362mil)  Top Layer
+   Violation between Pad U1-67(6000.984mil,2141.732mil)  Top Layer and 
+                     Pad U1-66(6000.984mil,2122.047mil)  Top Layer
+   Violation between Pad U1-68(6000.984mil,2161.417mil)  Top Layer and 
+                     Pad U1-67(6000.984mil,2141.732mil)  Top Layer
+   Violation between Pad U1-69(6000.984mil,2181.102mil)  Top Layer and 
+                     Pad U1-68(6000.984mil,2161.417mil)  Top Layer
+   Violation between Pad U1-70(6000.984mil,2200.787mil)  Top Layer and 
+                     Pad U1-69(6000.984mil,2181.102mil)  Top Layer
+   Violation between Pad U1-71(6000.984mil,2220.472mil)  Top Layer and 
+                     Pad U1-70(6000.984mil,2200.787mil)  Top Layer
+   Violation between Pad U1-72(6000.984mil,2240.157mil)  Top Layer and 
+                     Pad U1-71(6000.984mil,2220.472mil)  Top Layer
+   Violation between Pad U1-73(6000.984mil,2259.843mil)  Top Layer and 
+                     Pad U1-72(6000.984mil,2240.157mil)  Top Layer
+   Violation between Pad U1-74(6000.984mil,2279.528mil)  Top Layer and 
+                     Pad U1-73(6000.984mil,2259.843mil)  Top Layer
+   Violation between Pad U1-75(6000.984mil,2299.213mil)  Top Layer and 
+                     Pad U1-74(6000.984mil,2279.528mil)  Top Layer
+   Violation between Pad U1-77(5921.26mil,2359.252mil)  Top Layer and 
+                     Pad U1-76(5940.945mil,2359.252mil)  Top Layer
+   Violation between Pad U1-78(5901.575mil,2359.252mil)  Top Layer and 
+                     Pad U1-77(5921.26mil,2359.252mil)  Top Layer
+   Violation between Pad U1-79(5881.89mil,2359.252mil)  Top Layer and 
+                     Pad U1-78(5901.575mil,2359.252mil)  Top Layer
+   Violation between Pad U1-80(5862.205mil,2359.252mil)  Top Layer and 
+                     Pad U1-79(5881.89mil,2359.252mil)  Top Layer
+   Violation between Pad U1-81(5842.52mil,2359.252mil)  Top Layer and 
+                     Pad U1-80(5862.205mil,2359.252mil)  Top Layer
+   Violation between Pad U1-82(5822.835mil,2359.252mil)  Top Layer and 
+                     Pad U1-81(5842.52mil,2359.252mil)  Top Layer
+   Violation between Pad U1-83(5803.15mil,2359.252mil)  Top Layer and 
+                     Pad U1-82(5822.835mil,2359.252mil)  Top Layer
+   Violation between Pad U1-84(5783.465mil,2359.252mil)  Top Layer and 
+                     Pad U1-83(5803.15mil,2359.252mil)  Top Layer
+   Violation between Pad U1-85(5763.78mil,2359.252mil)  Top Layer and 
+                     Pad U1-84(5783.465mil,2359.252mil)  Top Layer
+   Violation between Pad U1-86(5744.095mil,2359.252mil)  Top Layer and 
+                     Pad U1-85(5763.78mil,2359.252mil)  Top Layer
+   Violation between Pad U1-87(5724.409mil,2359.252mil)  Top Layer and 
+                     Pad U1-86(5744.095mil,2359.252mil)  Top Layer
+   Violation between Pad U1-88(5704.724mil,2359.252mil)  Top Layer and 
+                     Pad U1-87(5724.409mil,2359.252mil)  Top Layer
+   Violation between Pad U1-89(5685.039mil,2359.252mil)  Top Layer and 
+                     Pad U1-88(5704.724mil,2359.252mil)  Top Layer
+   Violation between Pad U1-90(5665.354mil,2359.252mil)  Top Layer and 
+                     Pad U1-89(5685.039mil,2359.252mil)  Top Layer
+   Violation between Pad U1-91(5645.669mil,2359.252mil)  Top Layer and 
+                     Pad U1-90(5665.354mil,2359.252mil)  Top Layer
+   Violation between Pad U1-92(5625.984mil,2359.252mil)  Top Layer and 
+                     Pad U1-91(5645.669mil,2359.252mil)  Top Layer
+   Violation between Pad U1-93(5606.299mil,2359.252mil)  Top Layer and 
+                     Pad U1-92(5625.984mil,2359.252mil)  Top Layer
+   Violation between Pad U1-94(5586.614mil,2359.252mil)  Top Layer and 
+                     Pad U1-93(5606.299mil,2359.252mil)  Top Layer
+   Violation between Pad U1-95(5566.929mil,2359.252mil)  Top Layer and 
+                     Pad U1-94(5586.614mil,2359.252mil)  Top Layer
+   Violation between Pad U1-96(5547.244mil,2359.252mil)  Top Layer and 
+                     Pad U1-95(5566.929mil,2359.252mil)  Top Layer
+   Violation between Pad U1-97(5527.559mil,2359.252mil)  Top Layer and 
+                     Pad U1-96(5547.244mil,2359.252mil)  Top Layer
+   Violation between Pad U1-98(5507.874mil,2359.252mil)  Top Layer and 
+                     Pad U1-97(5527.559mil,2359.252mil)  Top Layer
+   Violation between Pad U1-99(5488.189mil,2359.252mil)  Top Layer and 
+                     Pad U1-98(5507.874mil,2359.252mil)  Top Layer
+   Violation between Pad U1-100(5468.504mil,2359.252mil)  Top Layer and 
+                     Pad U1-99(5488.189mil,2359.252mil)  Top Layer
+   Violation between Pad CON300-2(6423.228mil,1935.04mil)  Top Layer and 
+                     Pad CON300-1(6423.228mil,1978.347mil)  Top Layer
+   Violation between Pad CON300-3(6423.228mil,1891.733mil)  Top Layer and 
+                     Pad CON300-2(6423.228mil,1935.04mil)  Top Layer
+   Violation between Pad CON300-4(6423.228mil,1848.425mil)  Top Layer and 
+                     Pad CON300-3(6423.228mil,1891.733mil)  Top Layer
+   Violation between Pad CON300-5(6423.228mil,1805.118mil)  Top Layer and 
+                     Pad CON300-4(6423.228mil,1848.425mil)  Top Layer
+   Violation between Pad CON300-6(6423.228mil,1761.811mil)  Top Layer and 
+                     Pad CON300-5(6423.228mil,1805.118mil)  Top Layer
+   Violation between Pad CON300-7(6423.228mil,1718.504mil)  Top Layer and 
+                     Pad CON300-6(6423.228mil,1761.811mil)  Top Layer
+   Violation between Pad CON300-8(6423.228mil,1675.197mil)  Top Layer and 
+                     Pad CON300-7(6423.228mil,1718.504mil)  Top Layer
+   Violation between Pad CON300-9(6423.228mil,1631.89mil)  Top Layer and 
+                     Pad CON300-8(6423.228mil,1675.197mil)  Top Layer
+   Violation between Pad CON300-0(6442.913mil,1584.646mil)  Top Layer and 
+                     Pad CON300-9(6423.228mil,1631.89mil)  Top Layer
+Rule Violations :136
+
+Processing Rule : Silkscreen Over Component Pads (Clearance=10mil) (All),(All)
+   Violation between Pad X3-1(4734.252mil,2078.74mil)  Top Layer and 
+                     Arc (4682.52mil,2086.732mil)  Top Overlay
+   Violation between Track (4737.52mil,2111.732mil)(4737.52mil,2171.732mil)  Top Overlay and 
+                     Pad X3-1(4734.252mil,2078.74mil)  Top Layer
+   Violation between Track (4737.52mil,2111.732mil)(4737.52mil,2171.732mil)  Top Overlay and 
+                     Pad X3-4(4734.252mil,2204.724mil)  Top Layer
+   Violation between Text "CON300" (6035.433mil,2023.622mil)  Top Overlay and 
+                     Pad U1-61(6000.984mil,2023.622mil)  Top Layer
+   Violation between Text "CON300" (6035.433mil,2023.622mil)  Top Overlay and 
+                     Pad U1-62(6000.984mil,2043.307mil)  Top Layer
+   Violation between Text "CON300" (6035.433mil,2023.622mil)  Top Overlay and 
+                     Pad U1-63(6000.984mil,2062.992mil)  Top Layer
+   Violation between Track (6467.984mil,2109.764mil)(6488.866mil,2130.646mil)  Top Overlay and 
+                     Pad CON300-0(6442.913mil,2159.449mil)  Top Layer
+   Violation between Track (6488.866mil,2159.377mil)(6994.866mil,2159.992mil)  Top Overlay and 
+                     Pad CON300-0(6820.866mil,2194.882mil)  Top Layer
+   Violation between Track (6487.047mil,1619.764mil)(6952.047mil,1619.764mil)  Top Overlay and 
+                     Pad CON300-0(6820.866mil,1584.646mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-1(6423.228mil,1978.347mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-2(6423.228mil,1935.04mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-3(6423.228mil,1891.733mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-4(6423.228mil,1848.425mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-5(6423.228mil,1805.118mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-6(6423.228mil,1761.811mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-7(6423.228mil,1718.504mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-8(6423.228mil,1675.197mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6467.047mil,2109.764mil)  Top Overlay and 
+                     Pad CON300-9(6423.228mil,1631.89mil)  Top Layer
+   Violation between Track (6467.047mil,1639.764mil)(6487.047mil,1619.764mil)  Top Overlay and 
+                     Pad CON300-9(6423.228mil,1631.89mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-1(5466.142mil,1467.559mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-2(5466.142mil,1417.559mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-3(5466.142mil,1367.559mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-4(5466.142mil,1317.559mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-5(5466.142mil,1267.559mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-6(5466.142mil,1217.559mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-7(5466.142mil,1167.559mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-8(5466.142mil,1117.559mil)  Top Layer
+   Violation between Track (5506.142mil,1007.559mil)(5506.142mil,1527.559mil)  Top Overlay and 
+                     Pad U600-9(5466.142mil,1067.559mil)  Top Layer
+Rule Violations :28
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+   Violation between Text "C402" (6125.984mil,4074.803mil)  Top Overlay and 
+                     Text "C401" (6181.102mil,4074.803mil)  Top Overlay
+   Violation between Text "C403" (6070.866mil,4074.803mil)  Top Overlay and 
+                     Text "C402" (6125.984mil,4074.803mil)  Top Overlay
+   Violation between Text "C404" (6015.748mil,4074.803mil)  Top Overlay and 
+                     Text "C403" (6070.866mil,4074.803mil)  Top Overlay
+   Violation between Text "C405" (5960.63mil,4074.803mil)  Top Overlay and 
+                     Text "C404" (6015.748mil,4074.803mil)  Top Overlay
+   Violation between Text "C15" (5220.472mil,1744.094mil)  Top Overlay and 
+                     Text "C16" (5275.591mil,1744.094mil)  Top Overlay
+Rule Violations :5
+
+Processing Rule : Net Antennae (Tolerance=0mil) (Disabled)(All)
+Rule Violations :0
+
+
+Violations Detected : 226
+Time Elapsed        : 00:00:01
