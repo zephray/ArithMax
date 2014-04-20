@@ -157,3 +157,45 @@ void PM_EnterStandbyMode()
   PWR->CR|=1<<1;           //PDDSÖÃÎ»
   asm("WFI");               //Ö´ÐÐWFEÖ¸Áî
 }
+
+void PM_TIMConfig(void)
+{
+  NVIC_InitTypeDef NVIC_InitStructure;
+  TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+  uint16_t PrescalerValue = 0;
+  
+  /* TIM2 clock enable */
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+
+  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_3);
+  
+  /* Enable the TIM2 global Interrupt */
+  NVIC_InitStructure.NVIC_IRQChannel = TIM3_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+
+  NVIC_Init(&NVIC_InitStructure);
+  
+  /* Compute the prescaler value */
+  PrescalerValue = (uint16_t) 0x400;
+
+  /* Time base configuration */
+  TIM_TimeBaseStructure.TIM_Period = 0x800;
+  TIM_TimeBaseStructure.TIM_Prescaler = 0x400;
+  TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+  TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+
+  TIM_ClearFlag(TIM3, TIM_FLAG_Update);
+  
+  /* TIM IT enable */
+  TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
+
+  /* TIM2 enable counter */
+  TIM_Cmd(TIM3, ENABLE);
+  
+  /* Prescaler configuration */
+  TIM_PrescalerConfig(TIM3, PrescalerValue, TIM_PSCReloadMode_Immediate);
+}
+

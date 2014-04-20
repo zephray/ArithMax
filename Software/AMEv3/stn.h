@@ -41,9 +41,11 @@ void LCD_PowerSave();
 void LCD_Update();
 void LCD_RealUpdate(uint8_t CursorState);//Do not call!
 void LCD_StatusSet(unsigned char id,unsigned char status);
+void LCD_StatusClear();
 void LCD_CursorSet(uint8_t x,uint8_t y);
 void LCD_CursorEn(uint8_t en);
 void LCD_DispBmp(u8 x0,u8 y0,u8 x1,u8 y1,u8 *pic);
+void LCD_DispBmp1bpp(u8 x0,u8 y0,u8 w,u8 h,u8 *pic);
 void LCD_Fill(u8 x0,u8 y0,u8 x1,u8 y1,u8 c);
 void LCD_SelectFont(u8* font);
 void LCD_Display_ASCII_8X16_Chr(u16 left,u16 top,u8 chr,u16 color);

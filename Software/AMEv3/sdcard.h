@@ -28,7 +28,7 @@
  extern "C" {
 #endif
  
-#include <stm32f2xx.h>
+#include "main.h"
 /** @defgroup STM324xG_EVAL_SDIO_SD_Exported_Types
   * @{
   */ 

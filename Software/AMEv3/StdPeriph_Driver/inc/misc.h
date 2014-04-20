@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    misc.h
   * @author  MCD Application Team
-  * @version V1.1.2
-  * @date    05-March-2012 
+  * @version V1.0.2
+  * @date    05-March-2012
   * @brief   This file contains all the functions prototypes for the miscellaneous
   *          firmware library functions (add-on to CMSIS functions).
   ******************************************************************************
@@ -35,9 +35,9 @@
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f2xx.h"
+#include "stm32f4xx.h"
 
-/** @addtogroup STM32F2xx_StdPeriph_Driver
+/** @addtogroup STM32F4xx_StdPeriph_Driver
   * @{
   */
 
@@ -56,7 +56,7 @@ typedef struct
   uint8_t NVIC_IRQChannel;                    /*!< Specifies the IRQ channel to be enabled or disabled.
                                                    This parameter can be an enumerator of @ref IRQn_Type 
                                                    enumeration (For the complete STM32 Devices IRQ Channels
-                                                   list, please refer to stm32f2xx.h file) */
+                                                   list, please refer to stm32f4xx.h file) */
 
   uint8_t NVIC_IRQChannelPreemptionPriority;  /*!< Specifies the pre-emption priority for the IRQ channel
                                                    specified in NVIC_IRQChannel. This parameter can be a value

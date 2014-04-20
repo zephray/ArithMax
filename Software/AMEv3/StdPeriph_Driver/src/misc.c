@@ -2,8 +2,8 @@
   ******************************************************************************
   * @file    misc.c
   * @author  MCD Application Team
-  * @version V1.1.2
-  * @date    05-March-2012 
+  * @version V1.0.2
+  * @date    05-March-2012
   * @brief   This file provides all the miscellaneous firmware functions (add-on
   *          to CMSIS functions).
   *          
@@ -14,7 +14,7 @@
   *          ===================================================================      
   * 
   *            This section provide functions allowing to configure the NVIC interrupts (IRQ).
-  *            The Cortex-M3 exceptions are managed by CMSIS functions.
+  *            The Cortex-M4 exceptions are managed by CMSIS functions.
   *
   *            1. Configure the NVIC Priority Grouping using NVIC_PriorityGroupConfig()
   *                function according to the following table.
@@ -75,7 +75,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "misc.h"
 
-/** @addtogroup STM32F2xx_StdPeriph_Driver
+/** @addtogroup STM32F4xx_StdPeriph_Driver
   * @{
   */
 

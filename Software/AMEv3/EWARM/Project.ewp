@@ -12,7 +12,7 @@
       <name>General</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <version>21</version>
+        <version>22</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -30,7 +30,7 @@
         <option>
           <name>Variant</name>
           <version>20</version>
-          <state>38</state>
+          <state>40</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -61,7 +61,7 @@
         <option>
           <name>FPU</name>
           <version>2</version>
-          <state>0</state>
+          <state>5</state>
         </option>
         <option>
           <name>OGCoreOrChip</name>
@@ -87,7 +87,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>6.40.1.53794</state>
+          <state>6.70.1.5793</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -99,7 +99,7 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state>STM32F207VC	ST STM32F207VC</state>
+          <state>STM32F407VG	ST STM32F407VG</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
@@ -138,12 +138,12 @@
         <option>
           <name>GFPUCoreSlave</name>
           <version>20</version>
-          <state>38</state>
+          <state>40</state>
         </option>
         <option>
           <name>GBECoreSlave</name>
           <version>20</version>
-          <state>38</state>
+          <state>40</state>
         </option>
         <option>
           <name>OGUseCmsis</name>
@@ -153,13 +153,17 @@
           <name>OGUseCmsisDspLib</name>
           <state>0</state>
         </option>
+        <option>
+          <name>GRuntimeLibThreads</name>
+          <state>0</state>
+        </option>
       </data>
     </settings>
     <settings>
       <name>ICCARM</name>
       <archiveVersion>2</archiveVersion>
       <data>
-        <version>28</version>
+        <version>29</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -394,13 +398,17 @@
           <name>IccFloatSemantics</name>
           <state>1</state>
         </option>
+        <option>
+          <name>CCNoLiteralPool</name>
+          <state>0</state>
+        </option>
       </data>
     </settings>
     <settings>
       <name>AARM</name>
       <archiveVersion>2</archiveVersion>
       <data>
-        <version>8</version>
+        <version>9</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -556,6 +564,10 @@
           <name>AExtraOptionsV2</name>
           <state></state>
         </option>
+        <option>
+          <name>AsmNoLiteralPool</name>
+          <state>0</state>
+        </option>
       </data>
     </settings>
     <settings>
@@ -613,7 +625,7 @@
       <name>ILINK</name>
       <archiveVersion>0</archiveVersion>
       <data>
-        <version>15</version>
+        <version>16</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -893,6 +905,10 @@
           <version>0</version>
           <state>0</state>
         </option>
+        <option>
+          <name>IlinkThreadsSlave</name>
+          <state>1</state>
+        </option>
       </data>
     </settings>
     <settings>
@@ -925,7 +941,7 @@
   <group>
     <name>CMSIS</name>
     <file>
-      <name>$PROJ_DIR$\..\CMSIS\system_stm32f2xx.c</name>
+      <name>$PROJ_DIR$\..\CMSIS\system_stm32f4xx.c</name>
     </file>
   </group>
   <group>
@@ -1387,94 +1403,94 @@
       <name>$PROJ_DIR$\..\StdPeriph_Driver\src\misc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_adc.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_adc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_can.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_can.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_crc.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_crc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_cryp.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_cryp.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_cryp_aes.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_cryp_aes.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_cryp_des.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_cryp_des.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_cryp_tdes.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_cryp_tdes.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_dac.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_dac.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_dbgmcu.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_dbgmcu.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_dcmi.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_dcmi.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_dma.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_dma.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_exti.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_exti.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_flash.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_flash.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_fsmc.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_fsmc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_gpio.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_gpio.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_hash.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_hash.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_hash_md5.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_hash_md5.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_hash_sha1.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_hash_sha1.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_i2c.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_i2c.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_iwdg.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_iwdg.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_pwr.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_pwr.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_rcc.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_rcc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_rng.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_rng.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_rtc.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_rtc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_sdio.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_sdio.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_spi.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_spi.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_syscfg.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_syscfg.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_tim.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_tim.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_usart.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_usart.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f2xx_wwdg.c</name>
+      <name>$PROJ_DIR$\..\StdPeriph_Driver\src\stm32f4xx_wwdg.c</name>
     </file>
   </group>
   <group>
@@ -1490,6 +1506,9 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\powerman.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\rtc.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\sdcard.c</name>

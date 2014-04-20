@@ -5,6 +5,7 @@
 #include "spiflash.h"
 #include "key.h"
 #include "powerman.h"
+#include "rtc.h"
 //#include "dac.h"
 
 uint8_t brightness=30;
@@ -16,8 +17,6 @@ const char* menu_string[]=
 };
 
 __IO uint8_t ShiftState;//最低位：Shift状态 第二位：Alpha状态
-
-__IO uint32_t FlashID = 0;
 __IO uint32_t TimingDelay;
 
 void NVIC_Config(void)
@@ -53,14 +52,6 @@ void TimingDelay_Decrement(void)
   { 
     TimingDelay--;
   }
-}
-
-unsigned int SPI_FLASH_GetSize()
-{
-  unsigned int size;
-  FlashID = SPI_FLASH_ReadID();
-  size = mypow(2,(FlashID&0xff));
-  return size;
 }
 
 void About_main()
@@ -106,7 +97,7 @@ void Contrast_main()
     switch (key)
     {
     case KEY_CTRL_LEFT:if (brightness>0) brightness-=1; LCD_SetBrightness(brightness);break;
-    case KEY_CTRL_RIGHT:if (brightness<64) brightness+=1; LCD_SetBrightness(brightness);break;
+    case KEY_CTRL_RIGHT:if (brightness<63) brightness+=1; LCD_SetBrightness(brightness);break;
     case KEY_CTRL_AC:cont=0;break;
     } 
   }
@@ -118,7 +109,7 @@ void Diag_main()
   u16 i;
   LCD_Clear(0);
   LCD_String_5X7(0,1 ,"DIAGNOSTIC",1);
-  LCD_String_5X7(0,24,"Press AC",1);
+  LCD_String_5X7(0,24,"Press 9 To Start",1);
   LCD_Update();
   key=GetKey();
   if (key!=KEY_CHAR_9) return;
@@ -254,27 +245,36 @@ int main(void)
   uint16_t i;
   uint8_t key;
   
-  USART1_Config();
+  //USART1_Config();
         
   printf("\r\n\r\nSTM32F2 Development Platform\r\nBuild by Zweb.\r\n");
 
-  PM_SetCPUFreq(120);
+  PM_SetCPUFreq(168);
   NVIC_Config();
   
-  //DAC1_Config();
-  //printf("DAC Inited.\r\n");
-  LCD_Init();
-  LCD_StatusClear();
-  LCD_SelectFont((u8 *)Font_Ascii_5X7E);
-  printf("LCD Inited.\r\n");
-  //LCD_Clear(0x00);
   SPI_FLASH_Init();
   SPI_Flash_WAKEUP();
   Delay(5);
   sf_size = SPI_FLASH_GetSize();
   
- /*打印芯片的ID及设备ID*/
-  printf("SPIFLASH芯片ID为：0x%X , 容量为%d KB \r\n", FlashID, (sf_size>>10));
+  LCD_Init();
+  LCD_StatusClear();
+  LCD_SelectFont((u8 *)Font_Ascii_5X7E);
+  printf("LCD Inited.\r\n");
+  
+  RTC_Config();//初始化实时时钟
+  PWR_BackupAccessCmd(ENABLE);//使能备份寄存器操作
+  if (RTC_ReadBackupRegister(RTC_BKP_DR1)==0x0001)
+  {
+    RTC_WriteProtectionCmd(DISABLE);
+    RTC_WriteBackupRegister(RTC_BKP_DR1,0x0000);
+    PM_EnterStandbyMode();
+  }
+  PWR_BackupAccessCmd(DISABLE);
+  
+  //DAC1_Config();
+  //printf("DAC Inited.\r\n");
+  //LCD_Clear(0x00);
   
   KBD_Config();
   
@@ -291,6 +291,13 @@ int main(void)
   KBD_EXTIConfig();
   PM_LDO_On();
   state=SD_Init();
+  
+  IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);//使能写入PR和RLR
+  IWDG_SetPrescaler(IWDG_Prescaler_128);  //写入PR预分频值
+  IWDG_SetReload(100);  //写入RLR
+  
+  PM_TIMConfig();
+  IWDG_Enable();//KR写入0xCCCC
   
   PM_SetCPUFreq(16);
   

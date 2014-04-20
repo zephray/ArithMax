@@ -291,6 +291,15 @@ u32 SPI_FLASH_ReadDeviceID(void)
   SPI_FLASH_CS_HIGH();
   return Temp;
 }
+
+unsigned int SPI_FLASH_GetSize()
+{
+  u32 FlashID = 0;
+  u32 size;
+  FlashID = SPI_FLASH_ReadID();
+  size = mypow(2,(FlashID&0xff));
+  return size;
+}
 /******************************************************************************************
 *函数名：SPI_FLASH_StartReadSequence()
 * 参数：u32 ReadAddr 24位读地址

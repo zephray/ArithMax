@@ -27,6 +27,7 @@
 #include "stn.h"
 #include "pccon.h"
 #include "key.h"
+#include "powerman.h"
     
 uint16_t Timing=0;
 
@@ -143,7 +144,17 @@ void SysTick_Handler(void)
   Timing++;
   if (Timing==100)
   {
-    LCD_RealUpdate(1);
+    voltage=PM_GetVolt();
+    if (voltage<3680)
+    {
+      LCD_Fill(0,0,95,7,0);
+      LCD_String_5X7(0,0,"Battery Low",1);
+    }
+    if (voltage<3350)
+    {
+      PM_EnterStandbyMode();
+    }
+    LCD_RealUpdate(1);    
     Timing=0;
   }
   else if (Timing==50)
@@ -185,6 +196,15 @@ void EXTI0_IRQHandler(void)
   }
 }
 
+void TIM3_IRQHandler(void)
+{
+  if(TIM_GetITStatus(TIM3,TIM_IT_Update)!= RESET)
+  {
+    IWDG_ReloadCounter();
+    TIM_ClearITPendingBit(TIM3,TIM_FLAG_Update); 
+  }
+}
+
 void TIM2_IRQHandler(void)
 {
   if(TIM_GetITStatus(TIM2,TIM_IT_Update)!= RESET)
@@ -221,14 +241,19 @@ void TIM2_IRQHandler(void)
     {
       if (ShiftState&0x80)
       {
+        //IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
         LCD_DispBmp1bpp(0,0,96-1,32-1,(unsigned char *)gImage_mainlogo);
         LCD_StatusClear();
         LCD_RealUpdate(0);
         DelayUs(100000);
         DelayUs(100000);
-        DelayUs(100000);
+        DelayUs(50000);
         TIM_ClearITPendingBit(TIM2,TIM_FLAG_Update); 
-        PM_EnterStandbyMode();
+        PWR_BackupAccessCmd(ENABLE);//使能备份寄存器操作
+        RTC_WriteProtectionCmd(DISABLE);
+        RTC_WriteBackupRegister(RTC_BKP_DR1,0x0001);
+        PWR_BackupAccessCmd(DISABLE);
+        NVIC_SystemReset();
       }
     }else
     if (NowKey!=255)

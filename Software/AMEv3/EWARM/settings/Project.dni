@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=-280660643
+Checksum=806831662
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -34,60 +34,8 @@ ITMportsEnable=0
 ITMportsTermIO=0
 ITMportsLogFile=0
 ITMlogFile=$PROJ_DIR$\ITM.log
-[PowerLog]
-LogEnabled=0
-GraphEnabled=0
-ShowTimeLog=1
-ShowTimeSum=0
-Title0=I0
-Setup0=0 1 0 500 2 0 4 0 0
-LiveEnabled=0
-LiveFile=PowerLogLive.log
-[DataLog]
-LogEnabled=0
-SumEnabled=0
-GraphEnabled=0
-ShowTimeLog=1
-ShowTimeSum=1
-Title0=I0
-Setup0=0 1 0 500 2 0 4 0 0
-[EventLog]
-LogEnabled=0
-SumEnabled=0
-GraphEnabled=0
-ShowTimeLog=1
-ShowTimeSum=1
-Title0=Ch0
-Setup0=0 1 0 4294967295 1 0 4 0 0
-Title1=Ch1
-Setup1=0 1 0 4294967295 1 0 4 0 0
-Title2=Ch2
-Setup2=0 1 0 4294967295 1 0 4 0 0
-Title3=Ch3
-Setup3=0 1 0 4294967295 1 0 4 0 0
-SumSortOrder=0
-Event0=1 1 1
-Event1=1 1 1
-Event2=1 1 1
-Event3=1 1 1
-[InterruptLog]
-LogEnabled=0
-SumEnabled=0
-GraphEnabled=0
-ShowTimeLog=1
-ShowTimeSum=1
-SumSortOrder=0
-[Disassemble mode]
-mode=0
-[Breakpoints2]
-Count=0
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[Aliases]
-Count=0
-SuppressDialog=0
+[JLinkDriver]
+CStepIntDis=_ 0
 [Trace2]
 Enabled=0
 ShowSource=0
@@ -100,6 +48,50 @@ EventEXC=0
 EventFOLD=0
 EventLSU=0
 EventSLEEP=0
+[PowerLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=0
+Title0=I0
+Symbol0=0 4 1
+LiveEnabled=0
+LiveFile=PowerLogLive.log
+[DataLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+[EventLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+Title0=Ch0
+Symbol0=0 4 1
+Title1=Ch1
+Symbol1=0 4 1
+Title2=Ch2
+Symbol2=0 4 1
+Title3=Ch3
+Symbol3=0 4 1
+SumSortOrder=0
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
 [PowerProbe]
 Frequency=10000
 Probe0=I0
@@ -112,6 +104,10 @@ Mode=3
 Graph=0
 Symbiont=0
 Exclusions=
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Count=0
+[Aliases]
+Count=0
+SuppressDialog=0
