@@ -236,20 +236,15 @@ void Setup_main()
   }
 }
 
-void UI_ShowDateTime(u8 y)
+void UI_ShowDateTime(u8 y,RTC_TimeTypeDef *time,RTC_DateTypeDef *date)
 {
-  RTC_TimeTypeDef RTC_TimeStructure;
-  RTC_DateTypeDef RTC_DateStructure;
   LCD_String_5X7(0,y,"20  -  -     :  ",1);
-  RTC_WaitForSynchro();
-  RTC_GetDate(RTC_Format_BIN, &RTC_DateStructure);
-  RTC_GetTime(RTC_Format_BIN, &RTC_TimeStructure);
   //LCD_DispNum_5X7(11*6,8,RTC_TimeStructure.RTC_Seconds,2,1);
-  LCD_DispNum_5X7(11*6,y,RTC_TimeStructure.RTC_Hours,2,1);
-  LCD_DispNum_5X7(14*6,y,RTC_TimeStructure.RTC_Minutes,2,1);
-  LCD_DispNum_5X7(2*6,y,RTC_DateStructure.RTC_Year,2,1);
-  LCD_DispNum_5X7(5*6,y,RTC_DateStructure.RTC_Month,2,1);
-  LCD_DispNum_5X7(8*6,y,RTC_DateStructure.RTC_Date,2,1);
+  LCD_DispNum_5X7(11*6,y,time->RTC_Hours,2,1);
+  LCD_DispNum_5X7(14*6,y,time->RTC_Minutes,2,1);
+  LCD_DispNum_5X7(2*6,y,date->RTC_Year,2,1);
+  LCD_DispNum_5X7(5*6,y,date->RTC_Month,2,1);
+  LCD_DispNum_5X7(8*6,y,date->RTC_Date,2,1);
   LCD_Update();
 }
 
@@ -265,11 +260,7 @@ void SetTime_main()
   RTC_GetTime(RTC_Format_BIN, &RTC_TimeStructure);
   state=0;
   LCD_Clear(0);
-  UI_ShowDateTime(8);
-  RTC_WriteProtectionCmd(DISABLE);
-  RTC_EnterInitMode();
-  RTC_WaitForSynchro();
- 
+  UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
   while (state!=5)
   {
     //Set Year
@@ -285,8 +276,7 @@ void SetTime_main()
         tmp=RTC_DateStructure.RTC_Year;
         if (tmp<99) tmp++; else tmp=00;
         RTC_DateStructure.RTC_Year=tmp;
-        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else  
       if (key==KEY_CTRL_DOWN)
@@ -294,8 +284,7 @@ void SetTime_main()
         tmp=RTC_DateStructure.RTC_Year;
         if (tmp>0) tmp--; else tmp=99;
         RTC_DateStructure.RTC_Year=tmp;
-        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else
       if (key==KEY_CTRL_EXE)
@@ -305,6 +294,7 @@ void SetTime_main()
   
     //Set Month
     LCD_Line(5*6,16,7*6,16,1);
+    LCD_Update();
     while(state==1)
     {
       key=GetKey();
@@ -316,8 +306,7 @@ void SetTime_main()
         tmp=RTC_DateStructure.RTC_Month;
         if (tmp<12) tmp++; else tmp=1;
         RTC_DateStructure.RTC_Month=tmp;
-        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else  
       if (key==KEY_CTRL_DOWN)
@@ -325,8 +314,7 @@ void SetTime_main()
         tmp=RTC_DateStructure.RTC_Month;
         if (tmp>1) tmp--; else tmp=12;
         RTC_DateStructure.RTC_Month=tmp;
-        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else
       if (key==KEY_CTRL_EXE)
@@ -336,6 +324,7 @@ void SetTime_main()
   
     //Set Day
     LCD_Line(8*6,16,10*6,16,1);
+    LCD_Update();
     while(state==2)
     {
       key=GetKey();
@@ -347,8 +336,7 @@ void SetTime_main()
         tmp=RTC_DateStructure.RTC_Date;
         if (tmp<31) tmp++; else tmp=1;
         RTC_DateStructure.RTC_Date=tmp;
-        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else  
       if (key==KEY_CTRL_DOWN)
@@ -356,8 +344,7 @@ void SetTime_main()
         tmp=RTC_DateStructure.RTC_Date;
         if (tmp>1) tmp--; else tmp=31;
         RTC_DateStructure.RTC_Date=tmp;
-        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else
       if (key==KEY_CTRL_EXE)
@@ -367,6 +354,7 @@ void SetTime_main()
   
     //Set Hour
     LCD_Line(11*6,16,13*6,16,1);
+    LCD_Update();
     while(state==3)
     {
       key=GetKey();
@@ -378,8 +366,7 @@ void SetTime_main()
         tmp=RTC_TimeStructure.RTC_Hours;
         if (tmp<23) tmp++; else tmp=0;
         RTC_TimeStructure.RTC_Hours=tmp;
-        RTC_SetTime(RTC_Format_BIN,&RTC_TimeStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else  
       if (key==KEY_CTRL_DOWN)
@@ -387,8 +374,7 @@ void SetTime_main()
         tmp=RTC_TimeStructure.RTC_Hours;
         if (tmp>0) tmp--; else tmp=23;
         RTC_TimeStructure.RTC_Hours=tmp;
-        RTC_SetTime(RTC_Format_BIN,&RTC_TimeStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else
       if (key==KEY_CTRL_EXE)
@@ -398,6 +384,7 @@ void SetTime_main()
   
     //Set Minute
     LCD_Line(14*6,16,16*6,16,1);
+    LCD_Update();
     while(state==4)
     {
       key=GetKey();
@@ -409,8 +396,7 @@ void SetTime_main()
         tmp=RTC_TimeStructure.RTC_Minutes;
         if (tmp<59) tmp++; else tmp=0;
         RTC_TimeStructure.RTC_Minutes=tmp;
-        RTC_SetTime(RTC_Format_BIN,&RTC_TimeStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else  
       if (key==KEY_CTRL_DOWN)
@@ -418,24 +404,28 @@ void SetTime_main()
         tmp=RTC_TimeStructure.RTC_Minutes;
         if (tmp>0) tmp--; else tmp=59;
         RTC_TimeStructure.RTC_Minutes=tmp;
-        RTC_SetTime(RTC_Format_BIN,&RTC_TimeStructure);
-        UI_ShowDateTime(8);
+        UI_ShowDateTime(8,&RTC_TimeStructure,&RTC_DateStructure);
       }
       else
       if (key==KEY_CTRL_EXE)
         state=5;
     }
-    LCD_Line(14*6,16,16*6,16,0);
+    //LCD_Line(14*6,16,16*6,16,0);
+    //LCD_Update();
   }
-  RTC_ExitInitMode();
-  RTC_WriteProtectionCmd(ENABLE);
-  RTC_WaitForSynchro();
+  RTC_SetDateTime(&RTC_TimeStructure,&RTC_DateStructure);
 }
 
 void Mode_main()
 {
+  RTC_TimeTypeDef RTC_TimeStructure;
+  RTC_DateTypeDef RTC_DateStructure;
+ 
+  RTC_GetDate(RTC_Format_BIN, &RTC_DateStructure);
+  RTC_GetTime(RTC_Format_BIN, &RTC_TimeStructure);
+  
   LCD_Clear(0);
-  UI_ShowDateTime(0);
+  UI_ShowDateTime(0,&RTC_TimeStructure,&RTC_DateStructure);
   GetKey();
 }
 
