@@ -9,6 +9,7 @@ extern u32 voltage;
 extern const unsigned char gImage_mainlogo[384];
 extern const unsigned char Font_Ascii_5X7E_Menu[];
 extern const unsigned char Font_Ascii_5X7E[];
+extern uint16_t Timing,Autooff;
 
 void Setup_main();
 void About_main();

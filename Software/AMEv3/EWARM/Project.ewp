@@ -1085,9 +1085,6 @@
       <name>$PROJ_DIR$\..\Eigenmath\emain.cpp</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Eigenmath\emisc.cpp</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\Eigenmath\erf.cpp</name>
     </file>
     <file>
@@ -1218,6 +1215,9 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\Eigenmath\mini-test.cpp</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Eigenmath\misce.cpp</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\Eigenmath\mmodpow.cpp</name>
@@ -1496,6 +1496,9 @@
   <group>
     <name>User</name>
     <file>
+      <name>$PROJ_DIR$\..\g2048.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\key.c</name>
     </file>
     <file>
@@ -1512,9 +1515,6 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\sdcard.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\snake.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\spiflash.c</name>

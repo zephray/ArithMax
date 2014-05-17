@@ -4,7 +4,7 @@
 // up to 100 blocks of 100,000 atoms
 
 #define M 100
-#define N 500
+#define N 100
 
 U *mem[M];
 int mcount;

@@ -7,5 +7,6 @@ extern "C" {
 #include "spiflash.h"
 #include "usart.h"
 #include "powerman.h"
+#include "g2048.h"
 }
 #endif

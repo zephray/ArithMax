@@ -33,7 +33,7 @@ void PM_SetCPUFreq(uint8_t freq)
   while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_HSI);
   if (freq!=16)//如果需要使用PLL
   {
-    PLL_N=freq/2;
+    PLL_N=freq;
     //关闭主PLL
     RCC->CR &= (uint32_t)((uint32_t)~(RCC_CR_PLLON));
     //配置主PLL
@@ -44,7 +44,7 @@ void PM_SetCPUFreq(uint8_t freq)
     //等待PLL准备好
     while((RCC->CR & RCC_CR_PLLRDY) == 0);
     //启用FLASH预读，I/D-Cache，配置Flash等待
-    FLASH->ACR = FLASH_ACR_PRFTEN |FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_3WS;
+    FLASH->ACR = FLASH_ACR_PRFTEN |FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_4WS;
     //将时钟源选为PLL
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
     RCC->CFGR |= RCC_CFGR_SW_PLL;

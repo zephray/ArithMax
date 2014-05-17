@@ -29,7 +29,7 @@
 #include "key.h"
 #include "powerman.h"
     
-uint16_t Timing=0;
+uint16_t Timing=0,Autooff=0;
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -156,6 +156,15 @@ void SysTick_Handler(void)
     }
     LCD_RealUpdate(1);    
     Timing=0;
+    Autooff++;
+    if (Autooff==300)
+    {
+      PWR_BackupAccessCmd(ENABLE);//使能备份寄存器操作
+      RTC_WriteProtectionCmd(DISABLE);
+      RTC_WriteBackupRegister(RTC_BKP_DR1,0x0001);
+      PWR_BackupAccessCmd(DISABLE);
+      NVIC_SystemReset();
+    }
   }
   else if (Timing==50)
   {
@@ -258,6 +267,7 @@ void TIM2_IRQHandler(void)
     }else
     if (NowKey!=255)
     {
+      Autooff=0;
       LastKey=NowKey;
     }
     TIM_ClearITPendingBit(TIM2,TIM_FLAG_Update); 

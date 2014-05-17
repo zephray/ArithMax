@@ -27,6 +27,7 @@ void LCD_FSMC_Config(void)
     p.FSMC_DataLatency = 0x00;
     p.FSMC_AccessMode = FSMC_AccessMode_B;	 // 一般使用模式B来控制LCD   
 
+    FSMC_NORSRAMInitStructure.FSMC_AsynchronousWait = FSMC_AsynchronousWait_Disable;
     FSMC_NORSRAMInitStructure.FSMC_Bank = FSMC_Bank1_NORSRAM1;
     FSMC_NORSRAMInitStructure.FSMC_DataAddressMux = FSMC_DataAddressMux_Disable;
     FSMC_NORSRAMInitStructure.FSMC_MemoryType = FSMC_MemoryType_SRAM;
@@ -674,8 +675,8 @@ void LCD_DispNum(u16 x, u16 y, s32 num, u8 len,u16 color)
 
 void LCD_DispNum_5X7(u16 x, u16 y, s32 num, u8 len,u16 color)
 {           
-  u8 t,temp;
-  u8 enshow=0;
+  u16 t,temp;
+  u16 enshow=0;
   t=0;
   if(num<0)
   {

@@ -42,9 +42,11 @@ void input_eval_loop() {
       print_mem_info();
     } else if(strcmp(expr, "memgc") == 0) {
       gc();
+    } else if(strcmp(expr, "2048()") == 0) {
+      G2048_main();
     } else {
       execution_in_progress = 1;
-      PM_SetCPUFreq(152);
+      PM_SetCPUFreq(168);
       run(expr);
       PM_SetCPUFreq(16);
       execution_in_progress = 0;     

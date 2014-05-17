@@ -2,7 +2,7 @@
 
 // size of the symbol table
 
-#define NSYM 500
+#define NSYM 1000
 
 // Symbolic expressions are built by connecting U structs.
 //
@@ -226,7 +226,7 @@ enum {
 
 #define TOS 1000
 
-#define BUF 4000
+#define BUF 10000
 
 #define MAX_PROGRAM_SIZE 10001
 #define MAXPRIMETAB 10000

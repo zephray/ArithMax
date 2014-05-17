@@ -57,10 +57,10 @@ void TimingDelay_Decrement(void)
 void About_main()
 {
  LCD_Clear(0);
- LCD_String_5X7(0,0 ,(unsigned char*)"This calc. is   ",1);
- LCD_String_5X7(0,8 ,(unsigned char*)"Designed by Zweb",1);
- LCD_String_5X7(0,16,(unsigned char*)"of Ningbo High  ",1);
- LCD_String_5X7(0,24,(unsigned char*)"School.         ",1);
+ LCD_String_5X7(0,0 ,(unsigned char*)"ArithMax E301 r1",1);
+ LCD_String_5X7(0,8 ,(unsigned char*)"Software:1.0.DEV",1);
+ LCD_String_5X7(0,16,(unsigned char*)"",1);
+ LCD_String_5X7(0,24,(unsigned char*)"Designed by Zweb",1);
  LCD_Update();
  GetKey();
 }
@@ -70,7 +70,7 @@ void Info_main()
   char str[17]="Designed by Zweb";
   sprintf(str,"Flash:%dKB",(sf_size>>10));
   LCD_Clear(0);
-  LCD_String_5X7(0,0 ,(u8 *)"CPU:STM32F207VC",1);
+  LCD_String_5X7(0,0 ,(u8 *)"CPU:STM32F407VG",1);
   LCD_String_5X7(0,8 ,(u8 *)str,1);
   sprintf(str,"SD:%dMB",SDCardInfo.CardCapacity>>20);
   LCD_String_5X7(0,16,(u8 *)str,1); 
@@ -100,6 +100,11 @@ void Contrast_main()
     case KEY_CTRL_RIGHT:if (brightness<63) brightness+=1; LCD_SetBrightness(brightness);break;
     case KEY_CTRL_AC:cont=0;break;
     } 
+    PWR_BackupAccessCmd(ENABLE);//使能备份寄存器操作
+    RTC_WriteProtectionCmd(DISABLE);
+    RTC_WriteBackupRegister(RTC_BKP_DR2,brightness);
+    RTC_WriteProtectionCmd(ENABLE);
+    PWR_BackupAccessCmd(DISABLE);
   }
 }
 
@@ -109,7 +114,6 @@ void Diag_main()
   u16 i;
   LCD_Clear(0);
   LCD_String_5X7(0,1 ,"DIAGNOSTIC",1);
-  LCD_String_5X7(0,24,"Press 9 To Start",1);
   LCD_Update();
   key=GetKey();
   if (key!=KEY_CHAR_9) return;
@@ -201,6 +205,8 @@ void Diag_main()
   }
 }
 
+void SetTime_main();
+
 
 void Setup_main()
 {
@@ -209,7 +215,7 @@ void Setup_main()
   
   LCD_Clear(0x00);
   LCD_String_5X7(0,0 ,"1:Deg   2:Rad   ",1);
-  LCD_String_5X7(0,8 ,"3:Gra   4:Cmplx ",1);
+  LCD_String_5X7(0,8 ,"3:Gra   4:Date  ",1);
   LCD_String_5X7(0,16,"5:Cont. 6:Diag. ",1);
   LCD_String_5X7(0,24,"7:Info  8:About ",1);
   LCD_Update();
@@ -219,6 +225,7 @@ void Setup_main()
     cont=0;
     switch (key)
     {
+    case KEY_CHAR_4:SetTime_main();break;
     case KEY_CHAR_6:Diag_main();break;
     case KEY_CHAR_5:Contrast_main();break;
     case KEY_CHAR_7:Info_main();break;
@@ -229,14 +236,207 @@ void Setup_main()
   }
 }
 
+void UI_ShowDateTime(u8 y)
+{
+  RTC_TimeTypeDef RTC_TimeStructure;
+  RTC_DateTypeDef RTC_DateStructure;
+  LCD_String_5X7(0,y,"20  -  -     :  ",1);
+  RTC_WaitForSynchro();
+  RTC_GetDate(RTC_Format_BIN, &RTC_DateStructure);
+  RTC_GetTime(RTC_Format_BIN, &RTC_TimeStructure);
+  //LCD_DispNum_5X7(11*6,8,RTC_TimeStructure.RTC_Seconds,2,1);
+  LCD_DispNum_5X7(11*6,y,RTC_TimeStructure.RTC_Hours,2,1);
+  LCD_DispNum_5X7(14*6,y,RTC_TimeStructure.RTC_Minutes,2,1);
+  LCD_DispNum_5X7(2*6,y,RTC_DateStructure.RTC_Year,2,1);
+  LCD_DispNum_5X7(5*6,y,RTC_DateStructure.RTC_Month,2,1);
+  LCD_DispNum_5X7(8*6,y,RTC_DateStructure.RTC_Date,2,1);
+  LCD_Update();
+}
+
+void SetTime_main()
+{
+  RTC_TimeTypeDef RTC_TimeStructure;
+  RTC_DateTypeDef RTC_DateStructure;
+  u8 state,key;
+  u16 tmp;
+ 
+  //获取新的时间
+  RTC_GetDate(RTC_Format_BIN, &RTC_DateStructure);
+  RTC_GetTime(RTC_Format_BIN, &RTC_TimeStructure);
+  state=0;
+  LCD_Clear(0);
+  UI_ShowDateTime(8);
+  RTC_WriteProtectionCmd(DISABLE);
+  RTC_EnterInitMode();
+  RTC_WaitForSynchro();
+ 
+  while (state!=5)
+  {
+    //Set Year
+    LCD_Line(0*6,16,4*6,16,1);
+    while(state==0)
+    {
+      key=GetKey();
+      if (key==KEY_CTRL_AC)
+        return;
+      else
+      if (key==KEY_CTRL_UP)
+      {
+        tmp=RTC_DateStructure.RTC_Year;
+        if (tmp<99) tmp++; else tmp=00;
+        RTC_DateStructure.RTC_Year=tmp;
+        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
+        UI_ShowDateTime(8);
+      }
+      else  
+      if (key==KEY_CTRL_DOWN)
+      {
+        tmp=RTC_DateStructure.RTC_Year;
+        if (tmp>0) tmp--; else tmp=99;
+        RTC_DateStructure.RTC_Year=tmp;
+        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
+        UI_ShowDateTime(8);
+      }
+      else
+      if (key==KEY_CTRL_EXE)
+        state=1;
+    }
+    LCD_Line(0*6,16,4*6,16,0);
+  
+    //Set Month
+    LCD_Line(5*6,16,7*6,16,1);
+    while(state==1)
+    {
+      key=GetKey();
+      if (key==KEY_CTRL_AC)
+        state=0;
+      else
+      if (key==KEY_CTRL_UP)
+      {
+        tmp=RTC_DateStructure.RTC_Month;
+        if (tmp<12) tmp++; else tmp=1;
+        RTC_DateStructure.RTC_Month=tmp;
+        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
+        UI_ShowDateTime(8);
+      }
+      else  
+      if (key==KEY_CTRL_DOWN)
+      {
+        tmp=RTC_DateStructure.RTC_Month;
+        if (tmp>1) tmp--; else tmp=12;
+        RTC_DateStructure.RTC_Month=tmp;
+        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
+        UI_ShowDateTime(8);
+      }
+      else
+      if (key==KEY_CTRL_EXE)
+        state=2;
+    }
+    LCD_Line(5*6,16,7*6,16,0);
+  
+    //Set Day
+    LCD_Line(8*6,16,10*6,16,1);
+    while(state==2)
+    {
+      key=GetKey();
+      if (key==KEY_CTRL_AC)
+        state=1;
+      else
+      if (key==KEY_CTRL_UP)
+      {
+        tmp=RTC_DateStructure.RTC_Date;
+        if (tmp<31) tmp++; else tmp=1;
+        RTC_DateStructure.RTC_Date=tmp;
+        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
+        UI_ShowDateTime(8);
+      }
+      else  
+      if (key==KEY_CTRL_DOWN)
+      {
+        tmp=RTC_DateStructure.RTC_Date;
+        if (tmp>1) tmp--; else tmp=31;
+        RTC_DateStructure.RTC_Date=tmp;
+        RTC_SetDate(RTC_Format_BIN,&RTC_DateStructure);
+        UI_ShowDateTime(8);
+      }
+      else
+      if (key==KEY_CTRL_EXE)
+        state=3;
+    }
+    LCD_Line(8*6,16,10*6,16,0);
+  
+    //Set Hour
+    LCD_Line(11*6,16,13*6,16,1);
+    while(state==3)
+    {
+      key=GetKey();
+      if (key==KEY_CTRL_AC)
+        state=2;
+      else
+      if (key==KEY_CTRL_UP)
+      {
+        tmp=RTC_TimeStructure.RTC_Hours;
+        if (tmp<23) tmp++; else tmp=0;
+        RTC_TimeStructure.RTC_Hours=tmp;
+        RTC_SetTime(RTC_Format_BIN,&RTC_TimeStructure);
+        UI_ShowDateTime(8);
+      }
+      else  
+      if (key==KEY_CTRL_DOWN)
+      {
+        tmp=RTC_TimeStructure.RTC_Hours;
+        if (tmp>0) tmp--; else tmp=23;
+        RTC_TimeStructure.RTC_Hours=tmp;
+        RTC_SetTime(RTC_Format_BIN,&RTC_TimeStructure);
+        UI_ShowDateTime(8);
+      }
+      else
+      if (key==KEY_CTRL_EXE)
+        state=4;
+    }
+    LCD_Line(11*6,16,13*6,16,0);
+  
+    //Set Minute
+    LCD_Line(14*6,16,16*6,16,1);
+    while(state==4)
+    {
+      key=GetKey();
+      if (key==KEY_CTRL_AC)
+        state=3;
+      else
+      if (key==KEY_CTRL_UP)
+      {
+        tmp=RTC_TimeStructure.RTC_Minutes;
+        if (tmp<59) tmp++; else tmp=0;
+        RTC_TimeStructure.RTC_Minutes=tmp;
+        RTC_SetTime(RTC_Format_BIN,&RTC_TimeStructure);
+        UI_ShowDateTime(8);
+      }
+      else  
+      if (key==KEY_CTRL_DOWN)
+      {
+        tmp=RTC_TimeStructure.RTC_Minutes;
+        if (tmp>0) tmp--; else tmp=59;
+        RTC_TimeStructure.RTC_Minutes=tmp;
+        RTC_SetTime(RTC_Format_BIN,&RTC_TimeStructure);
+        UI_ShowDateTime(8);
+      }
+      else
+      if (key==KEY_CTRL_EXE)
+        state=5;
+    }
+    LCD_Line(14*6,16,16*6,16,0);
+  }
+  RTC_ExitInitMode();
+  RTC_WriteProtectionCmd(ENABLE);
+  RTC_WaitForSynchro();
+}
+
 void Mode_main()
 {
   LCD_Clear(0);
-  LCD_String_5X7(0,0 ,"1:CAS   2:STAT  ",1);
-  LCD_String_5X7(0,8,"3:TABLE 4:GRAPH ",1);
-  LCD_String_5X7(0,16,"5:PRGM  6:USRAPP",1);
-  LCD_Update();
-   GetKey();
+  UI_ShowDateTime(0);
+  GetKey();
 }
 
 int main(void)
@@ -270,6 +470,8 @@ int main(void)
     RTC_WriteBackupRegister(RTC_BKP_DR1,0x0000);
     PM_EnterStandbyMode();
   }
+  brightness = RTC_ReadBackupRegister(RTC_BKP_DR2);
+  LCD_SetBrightness(brightness);
   PWR_BackupAccessCmd(DISABLE);
   
   //DAC1_Config();
