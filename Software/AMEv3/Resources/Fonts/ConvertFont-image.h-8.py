@@ -31,7 +31,7 @@ def main():
 #ifndef __IMAGE_H_FONT_8
 #define __IMAGE_H_FONT_8
 /* This file is generated automatically by ConvertFont-image.h-8.py, do not edit it. */
-const unsigned char Font_Ascii_5X7E[96*8] = {
+const unsigned char Font_Ascii_6X8E[96*8] = {
 ''')
     while True:
         line = sys.stdin.readline()

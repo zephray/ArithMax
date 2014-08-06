@@ -532,8 +532,8 @@ void LCD_Display_ASCII_8X16_Chr(u16 left,u16 top,u8 chr,u16 color)
   }
 }
 
-//在指定位置显示ASCII 8*16文字
-void LCD_Display_ASCII_5X7_Chr(u16 left,u16 top,u8 chr,u16 color)
+//在指定位置显示ASCII 6*8文字
+void LCD_Display_ASCII_6X8_Chr(u16 left,u16 top,u8 chr,u16 color)
 {
   u16 x,y;
   u16 ptr;
@@ -542,7 +542,7 @@ void LCD_Display_ASCII_5X7_Chr(u16 left,u16 top,u8 chr,u16 color)
   if (mode==1){
   for (y=0;y<8;y++)
   {
-    for (x=0;x<5;x++)
+    for (x=0;x<6;x++)
     {
       if (((Curr_Font[ptr]<<x)&0x80)==0x80)
         LCD_Point(left+x,top+y,color);
@@ -554,7 +554,7 @@ void LCD_Display_ASCII_5X7_Chr(u16 left,u16 top,u8 chr,u16 color)
   }else{
   for (y=0;y<8;y++)
   {
-    for (x=0;x<5;x++)
+    for (x=0;x<6;x++)
     {
       if (((Curr_Font[ptr]<<x)&0x80)==0x80)
         LCD_Point(left+x,top+y,color); 
@@ -612,7 +612,7 @@ void LCD_String(u16 left,u16 top,u8 *s,u16 color)
   }
 }
 
-void LCD_String_5X7(u16 left,u16 top,u8 *s,u16 color)
+void LCD_String_6X8(u16 left,u16 top,u8 *s,u16 color)
 {
   u16 x;
   
@@ -621,7 +621,7 @@ void LCD_String_5X7(u16 left,u16 top,u8 *s,u16 color)
   {
     if (*s<128)
     {
-      LCD_Display_ASCII_5X7_Chr(left+x,top,*s++,color);
+      LCD_Display_ASCII_6X8_Chr(left+x,top,*s++,color);
       x+=6;
     }
     else
@@ -673,14 +673,14 @@ void LCD_DispNum(u16 x, u16 y, s32 num, u8 len,u16 color)
   }
 } 
 
-void LCD_DispNum_5X7(u16 x, u16 y, s32 num, u8 len,u16 color)
+void LCD_DispNum_6X8(u16 x, u16 y, s32 num, u8 len,u16 color)
 {           
   u16 t,temp;
   u16 enshow=0;
   t=0;
   if(num<0)
   {
-    LCD_Display_ASCII_5X7_Chr(x+6*t,y,'-',color);
+    LCD_Display_ASCII_6X8_Chr(x+6*t,y,'-',color);
     num=-num;
     t++;
   }               
@@ -691,10 +691,10 @@ void LCD_DispNum_5X7(u16 x, u16 y, s32 num, u8 len,u16 color)
     {
       if(temp==0)
       {
-        LCD_Display_ASCII_5X7_Chr(x+6*t,y,' ',color);
+        LCD_Display_ASCII_6X8_Chr(x+6*t,y,' ',color);
         continue;
       }else enshow=1;         
     }
-     LCD_Display_ASCII_5X7_Chr(x+6*t,y,temp+'0',color); 
+     LCD_Display_ASCII_6X8_Chr(x+6*t,y,temp+'0',color); 
   }
 } 

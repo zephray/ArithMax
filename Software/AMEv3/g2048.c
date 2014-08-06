@@ -23,7 +23,7 @@ void print(void)/*显示游戏界面*/
             if(code[i][j]!=0)
             {
                 LCD_Fill(24*j,8*i,24*j+22,8*i+7,1);
-                LCD_DispNum_5X7(24*j,8*i,code[i][j],4,0);/*显示数字和分隔线*/
+                LCD_DispNum_6X8(24*j,8*i,code[i][j],4,0);/*显示数字和分隔线*/
             }
         }
     }
@@ -134,9 +134,9 @@ int G2048_main(void)
         {
             case KEY_CTRL_AC:/*退出*/
                 LCD_Clear(0);
-                LCD_String_5X7(0,0,"Exit?",1);
-                LCD_String_5X7(0,16,"[AC] = Cancel",1);
-                LCD_String_5X7(0,24,"[=]  = OK",1);
+                LCD_String_6X8(0,0,"Exit?",1);
+                LCD_String_6X8(0,16,"[AC] = Cancel",1);
+                LCD_String_6X8(0,24,"[=]  = OK",1);
                 LCD_Update();
                 input=GetKey();
                 if(input==KEY_CTRL_EXE)
@@ -220,12 +220,12 @@ int G2048_main(void)
 
     }
     LCD_Clear(0);
-    LCD_String_5X7(0,0,"Game over!",1);
-    LCD_String_5X7(0,8,"Score:",1);
-    LCD_String_5X7(0,16,"Move:",1);
-    LCD_DispNum_5X7(36,8,score,10,1);
-    LCD_DispNum_5X7(30,16,move,11,1);
-    LCD_String_5X7(0,24,"Press any key",1);
+    LCD_String_6X8(0,0,"Game over!",1);
+    LCD_String_6X8(0,8,"Score:",1);
+    LCD_String_6X8(0,16,"Move:",1);
+    LCD_DispNum_6X8(36,8,score,10,1);
+    LCD_DispNum_6X8(30,16,move,11,1);
+    LCD_String_6X8(0,24,"Press any key",1);
     LCD_Update();
     GetKey();
     return 0;
