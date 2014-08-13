@@ -31,7 +31,7 @@ void locate(int x, int y) {
   myconsoley = y-1;
 }
 void print(unsigned char* msg) {
-  LCD_String_5X7( myconsolex*6, myconsoley*8, msg, 1);
+  LCD_String_6X8( myconsolex*6, myconsoley*8, msg, 1);
   myconsolex = myconsolex + strlen((char*)msg);
   LCD_Update();
 }
@@ -404,19 +404,19 @@ int dGetLine (char * s,int max) // This function is depended on dConsole
                     }
                   }*/
                   LCD_CursorEn(0);
-                  LCD_SelectFont((u8 *)Font_Ascii_5X7E_Menu);
+                  LCD_SelectFont((u8 *)Font_Ascii_6X8E_Menu);
                   Mode_main();
                   LCD_Clear(0);
-                  LCD_SelectFont((u8 *)Font_Ascii_5X7E);
+                  LCD_SelectFont((u8 *)Font_Ascii_6X8E);
                   dConsoleRedraw();
                   LCD_CursorEn(1);
                   refresh = 1;
                 } else if (key==KEY_CTRL_SETUP) {
                   LCD_CursorEn(0);
-                  LCD_SelectFont((u8 *)Font_Ascii_5X7E_Menu);
+                  LCD_SelectFont((u8 *)Font_Ascii_6X8E_Menu);
                   Setup_main();
                   LCD_Clear(0);
-                  LCD_SelectFont((u8 *)Font_Ascii_5X7E);
+                  LCD_SelectFont((u8 *)Font_Ascii_6X8E);
                   dConsoleRedraw();
                   LCD_CursorEn(1);
                   refresh = 1;

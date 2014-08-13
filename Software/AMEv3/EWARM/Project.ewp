@@ -1528,6 +1528,9 @@
     <file>
       <name>$PROJ_DIR$\..\usart.c</name>
     </file>
+    <file>
+      <name>$PROJ_DIR$\..\image-font-8.c</name>
+    </file>
   </group>
 </project>
 

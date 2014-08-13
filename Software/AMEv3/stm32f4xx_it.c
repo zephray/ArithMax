@@ -148,7 +148,7 @@ void SysTick_Handler(void)
     if (voltage<3680)
     {
       LCD_Fill(0,0,95,7,0);
-      LCD_String_5X7(0,0,"Battery Low",1);
+      LCD_String_6X8(0,0,"Battery Low",1);
     }
     if (voltage<3350)
     {

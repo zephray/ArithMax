@@ -296,6 +296,7 @@
       <file>$PROJ_DIR$\STN\Obj\stm32f4xx_rcc.pbi</file>
       <file>$PROJ_DIR$\..\StdPeriph_Driver\inc\stm32f10x_sdio.h</file>
       <file>$PROJ_DIR$\..\image.h</file>
+      <file>$PROJ_DIR$\..\image-font-8.c</file>
       <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
       <file>$PROJ_DIR$\Obj\system_stm32f4xx.pbi</file>
       <file>$PROJ_DIR$\Obj\stm32f4xx_hash_sha1.pbi</file>

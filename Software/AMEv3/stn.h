@@ -49,12 +49,12 @@ void LCD_DispBmp1bpp(u8 x0,u8 y0,u8 w,u8 h,u8 *pic);
 void LCD_Fill(u8 x0,u8 y0,u8 x1,u8 y1,u8 c);
 void LCD_SelectFont(u8* font);
 void LCD_Display_ASCII_8X16_Chr(u16 left,u16 top,u8 chr,u16 color);
-void LCD_Display_ASCII_5X7_Chr(u16 left,u16 top,u8 chr,u16 color);
+void LCD_Display_ASCII_6X8_Chr(u16 left,u16 top,u8 chr,u16 color);
 void LCD_Display_ASCII_8X16(u16 left,u16 top,u8 *s,u16 color);
 //void LCD_Display_ASCII_24X48_Chr(u8 left,u8 top,u8 chr);
 void LCD_Display_Chn_Chr(u8 left,u8 top,u8 *chr,u16 color);
 void LCD_String(u16 left,u16 top,u8 *s,u16 color);
-void LCD_String_5X7(u16 left,u16 top,u8 *s,u16 color);
+void LCD_String_6X8(u16 left,u16 top,u8 *s,u16 color);
 void LCD_DispNum(u16 x, u16 y, s32 num, u8 len,u16 color);
 //打点
 //参数：left 水平位置，top 垂直位置，color 颜色（0或1）

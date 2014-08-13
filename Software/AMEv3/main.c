@@ -57,10 +57,10 @@ void TimingDelay_Decrement(void)
 void About_main()
 {
  LCD_Clear(0);
- LCD_String_5X7(0,0 ,(unsigned char*)"ArithMax E301 r1",1);
- LCD_String_5X7(0,8 ,(unsigned char*)"Software:1.0.DEV",1);
- LCD_String_5X7(0,16,(unsigned char*)"",1);
- LCD_String_5X7(0,24,(unsigned char*)"Designed by Zweb",1);
+ LCD_String_6X8(0,0 ,(unsigned char*)"ArithMax E301 r1",1);
+ LCD_String_6X8(0,8 ,(unsigned char*)"Software:1.0.DEV",1);
+ LCD_String_6X8(0,16,(unsigned char*)"",1);
+ LCD_String_6X8(0,24,(unsigned char*)"Designed by Zweb",1);
  LCD_Update();
  GetKey();
 }
@@ -70,13 +70,13 @@ void Info_main()
   char str[17]="Designed by Zweb";
   sprintf(str,"Flash:%dKB",(sf_size>>10));
   LCD_Clear(0);
-  LCD_String_5X7(0,0 ,(u8 *)"CPU:STM32F407VG",1);
-  LCD_String_5X7(0,8 ,(u8 *)str,1);
+  LCD_String_6X8(0,0 ,(u8 *)"CPU:STM32F407VG",1);
+  LCD_String_6X8(0,8 ,(u8 *)str,1);
   sprintf(str,"SD:%dMB",SDCardInfo.CardCapacity>>20);
-  LCD_String_5X7(0,16,(u8 *)str,1); 
+  LCD_String_6X8(0,16,(u8 *)str,1); 
   voltage=PM_GetVolt();
   sprintf(str,"Volt:%dmV",voltage);
-  LCD_String_5X7(0,24,(u8 *)str,1);
+  LCD_String_6X8(0,24,(u8 *)str,1);
   LCD_Update();
   GetKey();
 }
@@ -87,9 +87,9 @@ void Contrast_main()
       u8 key;
       
       LCD_Clear(0x00);
-  LCD_String_5X7(0,0 ,"CONTRAST        ",1);
-  LCD_String_5X7(0,16,"LIGHT       DARK",1);
-  LCD_String_5X7(0,24," [<]        [>] ",1);
+  LCD_String_6X8(0,0 ,"CONTRAST        ",1);
+  LCD_String_6X8(0,16,"LIGHT       DARK",1);
+  LCD_String_6X8(0,24," [<]        [>] ",1);
   LCD_Update();
   while (cont)
   {
@@ -113,7 +113,7 @@ void Diag_main()
   u8 key;
   u16 i;
   LCD_Clear(0);
-  LCD_String_5X7(0,1 ,"DIAGNOSTIC",1);
+  LCD_String_6X8(0,1 ,"DIAGNOSTIC",1);
   LCD_Update();
   key=GetKey();
   if (key!=KEY_CHAR_9) return;
@@ -189,9 +189,9 @@ void Diag_main()
   LCD_WriteCmd(0xe0); 
   for (i=0;i<96;i++)
     LCD_WriteDat(0x00);
-  LCD_String_5X7(0,1 ,"ArithMax E300",1);
-  LCD_String_5X7(0,8 ,"EVT For DEV Only",1);
-  LCD_String_5X7(0,24,"Press AC",1);
+  LCD_String_6X8(0,1 ,"ArithMax E300",1);
+  LCD_String_6X8(0,8 ,"EVT For DEV Only",1);
+  LCD_String_6X8(0,24,"Press AC",1);
   LCD_Update();
   WaitForCertainKey(KEY_CTRL_AC);
   Contrast_main();
@@ -200,7 +200,7 @@ void Diag_main()
   while (key!=KEY_CTRL_EXE)
   {
     key=GetKey();
-    LCD_DispNum_5X7(0,0,key,3,1);
+    LCD_DispNum_6X8(0,0,key,3,1);
     LCD_Update();
   }
 }
@@ -214,10 +214,10 @@ void Setup_main()
   u8 cont =1;
   
   LCD_Clear(0x00);
-  LCD_String_5X7(0,0 ,"1:Deg   2:Rad   ",1);
-  LCD_String_5X7(0,8 ,"3:Gra   4:Date  ",1);
-  LCD_String_5X7(0,16,"5:Cont. 6:Diag. ",1);
-  LCD_String_5X7(0,24,"7:Info  8:About ",1);
+  LCD_String_6X8(0,0 ,"1:Deg   2:Rad   ",1);
+  LCD_String_6X8(0,8 ,"3:Gra   4:Date  ",1);
+  LCD_String_6X8(0,16,"5:Cont. 6:Diag. ",1);
+  LCD_String_6X8(0,24,"7:Info  8:About ",1);
   LCD_Update();
   while (cont==1)
   {
@@ -238,13 +238,13 @@ void Setup_main()
 
 void UI_ShowDateTime(u8 y,RTC_TimeTypeDef *time,RTC_DateTypeDef *date)
 {
-  LCD_String_5X7(0,y,"20  -  -     :  ",1);
-  //LCD_DispNum_5X7(11*6,8,RTC_TimeStructure.RTC_Seconds,2,1);
-  LCD_DispNum_5X7(11*6,y,time->RTC_Hours,2,1);
-  LCD_DispNum_5X7(14*6,y,time->RTC_Minutes,2,1);
-  LCD_DispNum_5X7(2*6,y,date->RTC_Year,2,1);
-  LCD_DispNum_5X7(5*6,y,date->RTC_Month,2,1);
-  LCD_DispNum_5X7(8*6,y,date->RTC_Date,2,1);
+  LCD_String_6X8(0,y,"20  -  -     :  ",1);
+  //LCD_DispNum_6X8(11*6,8,RTC_TimeStructure.RTC_Seconds,2,1);
+  LCD_DispNum_6X8(11*6,y,time->RTC_Hours,2,1);
+  LCD_DispNum_6X8(14*6,y,time->RTC_Minutes,2,1);
+  LCD_DispNum_6X8(2*6,y,date->RTC_Year,2,1);
+  LCD_DispNum_6X8(5*6,y,date->RTC_Month,2,1);
+  LCD_DispNum_6X8(8*6,y,date->RTC_Date,2,1);
   LCD_Update();
 }
 
@@ -449,7 +449,7 @@ int main(void)
   
   LCD_Init();
   LCD_StatusClear();
-  LCD_SelectFont((u8 *)Font_Ascii_5X7E);
+  LCD_SelectFont((u8 *)Font_Ascii_6X8E);
   printf("LCD Inited.\r\n");
   
   RTC_Config();//初始化实时时钟
