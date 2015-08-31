@@ -1,0 +1,30 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~AMEv3.PrjPCB|ReportField=ProjectFullPath~C:\Users\Zweb\Documents\ArithMax\ArithMaxE-STM32\AMEv3.PrjPCB|ReportField=Title~Bill of Materials For Project [AMEv3.PrjPCB] (No PCB Document Selected)|ReportField=TotalQuantity~105|ReportField=ReportTime~10:05:34|ReportField=ReportDate~2014/8/12 星期二|ReportField=ReportDateTime~2014/8/12 星期二 10:05:34|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~www.arithmax.org|ReportField=Address2~nbzwt@live.cn|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~Zweb|ReportField=Author~Zweb|ReportField=CheckedBy~Zweb|ReportField=CompanyName~AMTech|ReportField=CurrentDate~2014/8/12 星期二|ReportField=CurrentTime~10:05:33|ReportField=Date~|ReportField=DocumentFullPathAndName~C:\Users\Zweb\Documents\ArithMax\ArithMaxE-STM32\SheetMain.SchDoc|ReportField=DocumentName~SheetMain.SchDoc|ReportField=DocumentNumber~1|ReportField=DrawnBy~Zweb|ReportField=Engineer~Zweb|ReportField=ImagePath~|ReportField=ModifiedDate~2014/8/12 星期二|ReportField=Organization~|ReportField=ProjectName~AMEv3.PrjPCB|ReportField=Revision~R1|ReportField=Rule~|ReportField=SheetNumber~1|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~AMEv3 SCH|ReportField=DataSourceFileName~AMEv3.PrjPCB|ReportField=DataSourceFullPath~C:\Users\Zweb\Documents\ArithMax\ArithMaxE-STM32\AMEv3.PrjPCB
+Header 2|Header, 2-Pin|BAT|HDR1X2|Header 2|1
+104|Capacitor (Semiconductor SIM Model)|C8, C9, C10, C11, C14, C500|1608[0603]|Cap Semi|6
+2.2uF|Capacitor (Semiconductor SIM Model)|C12, C13, C400, C401, C402, C403, C404, C405|1608[0603]|Cap Semi|8
+22pF|Capacitor (Semiconductor SIM Model)|C15, C16|1608[0603]|Cap Semi|2
+12pF|Capacitor (Semiconductor SIM Model)|C17, C18|1608[0603]|Cap Semi|2
+4.7uF||C19|1608[0603]|EC|1
+105|Capacitor (Semiconductor SIM Model)|C100, C101|1608[0603]|Cap Semi|2
+0.1uF|Capacitor (Semiconductor SIM Model)|C102, C406, C407|1608[0603]|Cap Semi|3
+USB-MINIAB||CON200|USB-MICRO|USB-MINIAB|1
+TF||CON300|TF-2|TF|1
+Button||KEY1, KEY2, KEY3, KEY4, KEY5, KEY6, KEY7, KEY8, KEY9, KEY10, KEY11, KEY12, KEY13, KEY14, KEY15, KEY16, KEY17, KEY18, KEY19, KEY20, KEY21, KEY22, KEY23, KEY24, KEY25, KEY26, KEY27, KEY28, KEY29, KEY30, KEY31, KEY32, KEY33, KEY34, KEY35, KEY36, KEY37, KEY38, KEY39, KEY40, KEY41, KEY42, KEY43, KEY44, KEY45, KEY46, KEY47, KEY48, KEY49, KON|Button|Button|50
+BLM21PG221SN1|EMI Suppression Filters,2A,0805|L200|0805|BEAD__FERRITE|1
+FPC-QSG9631||LCD|LCD_28P|FPC-QSG9631|1
+Header 4|Header, 4-Pin|P1|HDR1X4|Header 4|1
+Header 16|Header, 16-Pin|PLEDB|CON_16P_1.0MM|Header 16|1
+10K|Resistor|R1, R7, R500|J1-0603|Res3|3
+NC|Resistor|R6|J1-0603|Res3|1
+0R|Resistor|R12, R202|J1-0603|Res3|2
+0.4R|Resistor|R102|J1-0603|Res3|1
+5K|Resistor|R103|J1-0603|Res3|1
+1M|Resistor|R104, R105|J1-0603|Res3|2
+22R|Resistor|R200, R201|J1-0603|Res3|2
+47K|Resistor|R300, R301, R302, R303, R304|J1-0603|Res3|5
+STM32F407VG|ARM Cortex-M3 Microcontroller|U1|100T1_L|STM32F407VG|1
+TP4056||U100|SO-8|TP4056|1
+ME6219||U101, U102|SOT-23-5|ME6219|2
+W25X64||U500|SOIC8|W25X16|1
+25MHz||X1|5032|CRYSTAL|1
+MC306-G-06Q-32.768 (manufacturer JFVNY)||X3|SM8|MC306|1

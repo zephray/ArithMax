@@ -1,0 +1,413 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD 10\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2014/4/11 ÐÇÆÚÎå</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">19:45:17</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc" class="file"><acronym title="C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc">C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">21</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDASA2DG"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAEB2DG">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDATB2DG">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAZB2DG">Clearance Constraint (Gap=6mil) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAMD2DG">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDASD2DG">Width Constraint (Min=6mil) (Max=20mil) (Preferred=7mil) (All)</a></td>
+<td class="column2">15</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDASG2DG">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAYG2DG">Hole Size Constraint (Min=11.811mil) (Max=250mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA4G2DG">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAEH2DG">Minimum Solder Mask Sliver (Gap=10mil) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAKH2DG">Silkscreen Over Component Pads (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAQH2DG">Silk to Silk (Clearance=10mil) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAWH2DG">Net Antennae (Tolerance=0mil) (Disabled)(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">21</td>
+</tr>
+</table><br><hr><a name="IDAEB2DG"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6768.5mil|Location2.X=6894.5mil|Location1.Y=3281.5mil|Location2.Y=3288.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6768.5mil|Location2.X=6894.5mil|Location1.Y=3281.5mil|Location2.Y=3288.5mil|Absolute=True">Track (6772mil,3285mil)(6891mil,3285mil)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True">Pad CON200-7(6836mil,3274mil)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDAZB2DG"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Clearance Constraint (Gap=6mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True">Pad CON200-7(6836mil,3274mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6823.043mil|Location2.X=6909.986mil|Location1.Y=3243.621mil|Location2.Y=3303.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6823.043mil|Location2.X=6909.986mil|Location1.Y=3243.621mil|Location2.Y=3303.986mil|Absolute=True">Arc (6816.55mil,3350.135mil)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True">Pad CON200-7(6836mil,3274mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6823.043mil|Location2.X=6909.986mil|Location1.Y=3243.621mil|Location2.Y=3303.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6823.043mil|Location2.X=6909.986mil|Location1.Y=3243.621mil|Location2.Y=3303.986mil|Absolute=True">Arc (6816.55mil,3350.135mil)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True">Pad CON200-7(6836mil,3274mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6823.043mil|Location2.X=6909.986mil|Location1.Y=3243.621mil|Location2.Y=3303.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6823.043mil|Location2.X=6909.986mil|Location1.Y=3243.621mil|Location2.Y=3303.986mil|Absolute=True">Arc (6816.55mil,3350.135mil)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True">Pad CON200-7(6836mil,3274mil)  Multi-Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6823.043mil|Location2.X=6909.986mil|Location1.Y=3243.621mil|Location2.Y=3303.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6823.043mil|Location2.X=6909.986mil|Location1.Y=3243.621mil|Location2.Y=3303.986mil|Absolute=True">Arc (6816.55mil,3350.135mil)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6768.5mil|Location2.X=6894.5mil|Location1.Y=3281.5mil|Location2.Y=3288.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6768.5mil|Location2.X=6894.5mil|Location1.Y=3281.5mil|Location2.Y=3288.5mil|Absolute=True">Track (6772mil,3285mil)(6891mil,3285mil)  Bottom Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6822.221mil|Location2.X=6849.779mil|Location1.Y=3260.22mil|Location2.Y=3287.78mil|Absolute=True">Pad CON200-7(6836mil,3274mil)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDASD2DG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=6mil) (Max=20mil) (Preferred=7mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4596.612mil|Location2.X=4639.158mil|Location1.Y=1044.628mil|Location2.Y=1088.518mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4596.612mil|Location2.X=4639.158mil|Location1.Y=1044.628mil|Location2.Y=1088.518mil|Absolute=True">Width Constraint: Arc (4799.213mil,1275.591mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6911.482mil|Location2.X=6955.372mil|Location1.Y=1072.99mil|Location2.Y=1115.536mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6911.482mil|Location2.X=6955.372mil|Location1.Y=1072.99mil|Location2.Y=1115.536mil|Absolute=True">Width Constraint: Arc (6724.409mil,1275.591mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4991.063mil|Location2.X=5045.254mil|Location1.Y=1112.18mil|Location2.Y=1124.14mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4991.063mil|Location2.X=5045.254mil|Location1.Y=1112.18mil|Location2.Y=1124.14mil|Absolute=True">Width Constraint: Arc (4996.063mil,1000mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6522.559mil|Location2.X=6576.75mil|Location1.Y=1112.18mil|Location2.Y=1124.14mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6522.559mil|Location2.X=6576.75mil|Location1.Y=1112.18mil|Location2.Y=1124.14mil|Absolute=True">Width Constraint: Arc (6527.559mil,1000mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6993.97mil|Location2.X=7005.93mil|Location1.Y=3022.559mil|Location2.Y=3076.75mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6993.97mil|Location2.X=7005.93mil|Location1.Y=3022.559mil|Location2.Y=3076.75mil|Absolute=True">Width Constraint: Track (7000mil,1275.59mil)(7000mil,4779.528mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.811mil|Location2.X=5811.002mil|Location1.Y=994.07mil|Location2.Y=1006.03mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.811mil|Location2.X=5811.002mil|Location1.Y=994.07mil|Location2.Y=1006.03mil|Absolute=True">Width Constraint: Track (5114.174mil,1000mil)(6409.448mil,1000mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6680.04mil|Location2.X=6734.231mil|Location1.Y=994.07mil|Location2.Y=1006.03mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6680.04mil|Location2.X=6734.231mil|Location1.Y=994.07mil|Location2.Y=1006.03mil|Absolute=True">Width Constraint: Track (6645.67mil,1000mil)(6724.41mil,1000mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4833.582mil|Location2.X=4887.773mil|Location1.Y=994.07mil|Location2.Y=1006.03mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4833.582mil|Location2.X=4887.773mil|Location1.Y=994.07mil|Location2.Y=1006.03mil|Absolute=True">Width Constraint: Track (4799.212mil,1000mil)(4877.952mil,1000mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4517.592mil|Location2.X=4529.552mil|Location1.Y=2322.795mil|Location2.Y=2376.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4517.592mil|Location2.X=4529.552mil|Location1.Y=2322.795mil|Location2.Y=2376.986mil|Absolute=True">Width Constraint: Track (4523.622mil,1275.59mil)(4523.622mil,3380mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6589.764mil|Location2.X=6643.955mil|Location1.Y=4773.598mil|Location2.Y=4785.558mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6589.764mil|Location2.X=6643.955mil|Location1.Y=4773.598mil|Location2.Y=4785.558mil|Absolute=True">Width Constraint: Track (6189.528mil,4779.528mil)(7000mil,4779.528mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5089.764mil|Location2.X=5143.955mil|Location1.Y=4773.598mil|Location2.Y=4785.558mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5089.764mil|Location2.X=5143.955mil|Location1.Y=4773.598mil|Location2.Y=4785.558mil|Absolute=True">Width Constraint: Track (4000mil,4779.528mil)(6189.528mil,4779.528mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3993.97mil|Location2.X=4005.93mil|Location1.Y=4159.764mil|Location2.Y=4213.955mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3993.97mil|Location2.X=4005.93mil|Location1.Y=4159.764mil|Location2.Y=4213.955mil|Absolute=True">Width Constraint: Track (4000mil,3550mil)(4000mil,4779.528mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4256.811mil|Location2.X=4311.002mil|Location1.Y=3544.07mil|Location2.Y=3556.03mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4256.811mil|Location2.X=4311.002mil|Location1.Y=3544.07mil|Location2.Y=3556.03mil|Absolute=True">Width Constraint: Track (4000mil,3550mil)(4523.622mil,3550mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4517.592mil|Location2.X=4529.552mil|Location1.Y=3445mil|Location2.Y=3499.191mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4517.592mil|Location2.X=4529.552mil|Location1.Y=3445mil|Location2.Y=3499.191mil|Absolute=True">Width Constraint: Track (4523.622mil,3380mil)(4523.622mil,3520mil)  Top Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4517.592mil|Location2.X=4529.552mil|Location1.Y=3530mil|Location2.Y=3584.191mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Administrator\Documents\ArithMax\ArithMaxE-STM32\PCB1-B-EVT2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4517.592mil|Location2.X=4529.552mil|Location1.Y=3530mil|Location2.Y=3584.191mil|Absolute=True">Width Constraint: Track (4523.622mil,3520mil)(4523.622mil,3550mil)  Top Layer</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>
