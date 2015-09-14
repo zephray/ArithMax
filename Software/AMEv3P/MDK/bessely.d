@@ -1,0 +1,11 @@
+.\bessely.o: ..\Eigenmath\bessely.cpp
+.\bessely.o: ..\Eigenmath\stdafx.h
+.\bessely.o: ..\Eigenmath\defs.h
+.\bessely.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\bessely.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\bessely.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\bessely.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\bessely.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\bessely.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\bessely.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\bessely.o: ..\Eigenmath\prototypes.h

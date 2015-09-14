@@ -1,0 +1,11 @@
+.\partition.o: ..\Eigenmath\partition.cpp
+.\partition.o: ..\Eigenmath\stdafx.h
+.\partition.o: ..\Eigenmath\defs.h
+.\partition.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\partition.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\partition.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\partition.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\partition.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\partition.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\partition.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\partition.o: ..\Eigenmath\prototypes.h

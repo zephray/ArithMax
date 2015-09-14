@@ -1,0 +1,11 @@
+.\simplify.o: ..\Eigenmath\simplify.cpp
+.\simplify.o: ..\Eigenmath\stdafx.h
+.\simplify.o: ..\Eigenmath\defs.h
+.\simplify.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\simplify.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\simplify.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\simplify.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\simplify.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\simplify.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\simplify.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\simplify.o: ..\Eigenmath\prototypes.h

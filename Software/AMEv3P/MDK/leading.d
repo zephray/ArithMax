@@ -1,0 +1,11 @@
+.\leading.o: ..\Eigenmath\leading.cpp
+.\leading.o: ..\Eigenmath\stdafx.h
+.\leading.o: ..\Eigenmath\defs.h
+.\leading.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\leading.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\leading.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\leading.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\leading.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\leading.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\leading.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\leading.o: ..\Eigenmath\prototypes.h

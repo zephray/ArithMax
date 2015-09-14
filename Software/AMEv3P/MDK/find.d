@@ -1,0 +1,11 @@
+.\find.o: ..\Eigenmath\find.cpp
+.\find.o: ..\Eigenmath\stdafx.h
+.\find.o: ..\Eigenmath\defs.h
+.\find.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\find.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\find.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\find.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\find.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\find.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\find.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\find.o: ..\Eigenmath\prototypes.h

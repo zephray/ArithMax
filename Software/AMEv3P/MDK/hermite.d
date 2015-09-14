@@ -1,0 +1,11 @@
+.\hermite.o: ..\Eigenmath\hermite.cpp
+.\hermite.o: ..\Eigenmath\stdafx.h
+.\hermite.o: ..\Eigenmath\defs.h
+.\hermite.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\hermite.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\hermite.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\hermite.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\hermite.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\hermite.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\hermite.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\hermite.o: ..\Eigenmath\prototypes.h

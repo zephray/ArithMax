@@ -1,0 +1,11 @@
+.\choose.o: ..\Eigenmath\choose.cpp
+.\choose.o: ..\Eigenmath\stdafx.h
+.\choose.o: ..\Eigenmath\defs.h
+.\choose.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\choose.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\choose.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\choose.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\choose.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\choose.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\choose.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\choose.o: ..\Eigenmath\prototypes.h

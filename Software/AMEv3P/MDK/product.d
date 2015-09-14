@@ -1,0 +1,11 @@
+.\product.o: ..\Eigenmath\product.cpp
+.\product.o: ..\Eigenmath\stdafx.h
+.\product.o: ..\Eigenmath\defs.h
+.\product.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\product.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\product.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\product.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\product.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\product.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\product.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\product.o: ..\Eigenmath\prototypes.h

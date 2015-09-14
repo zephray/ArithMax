@@ -1,0 +1,11 @@
+.\degree.o: ..\Eigenmath\degree.cpp
+.\degree.o: ..\Eigenmath\stdafx.h
+.\degree.o: ..\Eigenmath\defs.h
+.\degree.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\degree.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\degree.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\degree.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\degree.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\degree.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\degree.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\degree.o: ..\Eigenmath\prototypes.h

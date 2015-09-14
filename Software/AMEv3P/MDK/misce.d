@@ -1,0 +1,11 @@
+.\misce.o: ..\Eigenmath\misce.cpp
+.\misce.o: ..\Eigenmath\stdafx.h
+.\misce.o: ..\Eigenmath\defs.h
+.\misce.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\misce.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\misce.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\misce.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\misce.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\misce.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\misce.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\misce.o: ..\Eigenmath\prototypes.h

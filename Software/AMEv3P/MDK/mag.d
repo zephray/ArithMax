@@ -1,0 +1,11 @@
+.\mag.o: ..\Eigenmath\mag.cpp
+.\mag.o: ..\Eigenmath\stdafx.h
+.\mag.o: ..\Eigenmath\defs.h
+.\mag.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\mag.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\mag.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\mag.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\mag.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\mag.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\mag.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\mag.o: ..\Eigenmath\prototypes.h

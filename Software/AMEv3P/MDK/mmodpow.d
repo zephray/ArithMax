@@ -1,0 +1,11 @@
+.\mmodpow.o: ..\Eigenmath\mmodpow.cpp
+.\mmodpow.o: ..\Eigenmath\stdafx.h
+.\mmodpow.o: ..\Eigenmath\defs.h
+.\mmodpow.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\mmodpow.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\mmodpow.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\mmodpow.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\mmodpow.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\mmodpow.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\mmodpow.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\mmodpow.o: ..\Eigenmath\prototypes.h

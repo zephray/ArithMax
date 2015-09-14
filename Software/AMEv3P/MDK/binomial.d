@@ -1,0 +1,11 @@
+.\binomial.o: ..\Eigenmath\binomial.cpp
+.\binomial.o: ..\Eigenmath\stdafx.h
+.\binomial.o: ..\Eigenmath\defs.h
+.\binomial.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\binomial.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\binomial.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\binomial.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\binomial.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\binomial.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\binomial.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\binomial.o: ..\Eigenmath\prototypes.h

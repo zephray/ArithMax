@@ -1,0 +1,11 @@
+.\bake.o: ..\Eigenmath\bake.cpp
+.\bake.o: ..\Eigenmath\stdafx.h
+.\bake.o: ..\Eigenmath\defs.h
+.\bake.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\bake.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\bake.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\bake.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\bake.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\bake.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\bake.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\bake.o: ..\Eigenmath\prototypes.h

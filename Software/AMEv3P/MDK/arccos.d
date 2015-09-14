@@ -1,0 +1,11 @@
+.\arccos.o: ..\Eigenmath\arccos.cpp
+.\arccos.o: ..\Eigenmath\stdafx.h
+.\arccos.o: ..\Eigenmath\defs.h
+.\arccos.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\arccos.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\arccos.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\arccos.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\arccos.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\arccos.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\arccos.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\arccos.o: ..\Eigenmath\prototypes.h

@@ -1,0 +1,11 @@
+.\clock.o: ..\Eigenmath\clock.cpp
+.\clock.o: ..\Eigenmath\stdafx.h
+.\clock.o: ..\Eigenmath\defs.h
+.\clock.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\clock.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\clock.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\clock.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\clock.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\clock.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\clock.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\clock.o: ..\Eigenmath\prototypes.h

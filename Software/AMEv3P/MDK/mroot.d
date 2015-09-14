@@ -1,0 +1,11 @@
+.\mroot.o: ..\Eigenmath\mroot.cpp
+.\mroot.o: ..\Eigenmath\stdafx.h
+.\mroot.o: ..\Eigenmath\defs.h
+.\mroot.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\mroot.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\mroot.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\mroot.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\mroot.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\mroot.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\mroot.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\mroot.o: ..\Eigenmath\prototypes.h

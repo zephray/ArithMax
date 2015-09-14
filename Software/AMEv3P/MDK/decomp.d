@@ -1,0 +1,11 @@
+.\decomp.o: ..\Eigenmath\decomp.cpp
+.\decomp.o: ..\Eigenmath\stdafx.h
+.\decomp.o: ..\Eigenmath\defs.h
+.\decomp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\decomp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\decomp.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\decomp.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\decomp.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\decomp.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\decomp.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\decomp.o: ..\Eigenmath\prototypes.h

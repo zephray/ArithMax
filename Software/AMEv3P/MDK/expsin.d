@@ -1,0 +1,11 @@
+.\expsin.o: ..\Eigenmath\expsin.cpp
+.\expsin.o: ..\Eigenmath\stdafx.h
+.\expsin.o: ..\Eigenmath\defs.h
+.\expsin.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\expsin.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\expsin.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\expsin.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\expsin.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\expsin.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\expsin.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\expsin.o: ..\Eigenmath\prototypes.h

@@ -1,0 +1,11 @@
+.\inv.o: ..\Eigenmath\inv.cpp
+.\inv.o: ..\Eigenmath\stdafx.h
+.\inv.o: ..\Eigenmath\defs.h
+.\inv.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\inv.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\inv.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\inv.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\inv.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\inv.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\inv.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\inv.o: ..\Eigenmath\prototypes.h

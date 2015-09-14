@@ -1,0 +1,11 @@
+.\defint.o: ..\Eigenmath\defint.cpp
+.\defint.o: ..\Eigenmath\stdafx.h
+.\defint.o: ..\Eigenmath\defs.h
+.\defint.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\defint.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\defint.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\defint.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\defint.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\defint.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\defint.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\defint.o: ..\Eigenmath\prototypes.h

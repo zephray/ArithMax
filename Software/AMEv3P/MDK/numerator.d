@@ -1,0 +1,11 @@
+.\numerator.o: ..\Eigenmath\numerator.cpp
+.\numerator.o: ..\Eigenmath\stdafx.h
+.\numerator.o: ..\Eigenmath\defs.h
+.\numerator.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\numerator.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\numerator.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\numerator.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\numerator.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\numerator.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\numerator.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\numerator.o: ..\Eigenmath\prototypes.h

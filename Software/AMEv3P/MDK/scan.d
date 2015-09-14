@@ -1,0 +1,11 @@
+.\scan.o: ..\Eigenmath\scan.cpp
+.\scan.o: ..\Eigenmath\stdafx.h
+.\scan.o: ..\Eigenmath\defs.h
+.\scan.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\scan.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\scan.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\scan.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\scan.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\scan.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\scan.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\scan.o: ..\Eigenmath\prototypes.h

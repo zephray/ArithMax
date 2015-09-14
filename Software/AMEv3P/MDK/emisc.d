@@ -1,0 +1,11 @@
+.\emisc.o: ..\Eigenmath\emisc.cpp
+.\emisc.o: ..\Eigenmath\stdafx.h
+.\emisc.o: ..\Eigenmath\defs.h
+.\emisc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\emisc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\emisc.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\emisc.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\emisc.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\emisc.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\emisc.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\emisc.o: ..\Eigenmath\prototypes.h

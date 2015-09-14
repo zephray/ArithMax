@@ -1,0 +1,11 @@
+.\laguerre.o: ..\Eigenmath\laguerre.cpp
+.\laguerre.o: ..\Eigenmath\stdafx.h
+.\laguerre.o: ..\Eigenmath\defs.h
+.\laguerre.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\laguerre.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\laguerre.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\laguerre.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\laguerre.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\laguerre.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\laguerre.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\laguerre.o: ..\Eigenmath\prototypes.h

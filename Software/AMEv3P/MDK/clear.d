@@ -1,0 +1,11 @@
+.\clear.o: ..\Eigenmath\clear.cpp
+.\clear.o: ..\Eigenmath\stdafx.h
+.\clear.o: ..\Eigenmath\defs.h
+.\clear.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\clear.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\clear.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\clear.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\clear.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\clear.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\clear.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\clear.o: ..\Eigenmath\prototypes.h

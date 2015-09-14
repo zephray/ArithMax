@@ -1,0 +1,11 @@
+.\dpow.o: ..\Eigenmath\dpow.cpp
+.\dpow.o: ..\Eigenmath\stdafx.h
+.\dpow.o: ..\Eigenmath\defs.h
+.\dpow.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\dpow.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\dpow.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\dpow.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\dpow.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\dpow.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\dpow.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\dpow.o: ..\Eigenmath\prototypes.h

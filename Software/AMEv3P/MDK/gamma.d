@@ -1,0 +1,11 @@
+.\gamma.o: ..\Eigenmath\gamma.cpp
+.\gamma.o: ..\Eigenmath\stdafx.h
+.\gamma.o: ..\Eigenmath\defs.h
+.\gamma.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\gamma.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\gamma.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\gamma.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\gamma.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\gamma.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\gamma.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\gamma.o: ..\Eigenmath\prototypes.h

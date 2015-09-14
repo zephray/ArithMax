@@ -1,0 +1,11 @@
+.\tanh.o: ..\Eigenmath\tanh.cpp
+.\tanh.o: ..\Eigenmath\stdafx.h
+.\tanh.o: ..\Eigenmath\defs.h
+.\tanh.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\tanh.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\tanh.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\tanh.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\tanh.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\tanh.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\tanh.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\tanh.o: ..\Eigenmath\prototypes.h

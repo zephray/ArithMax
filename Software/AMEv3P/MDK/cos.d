@@ -1,0 +1,11 @@
+.\cos.o: ..\Eigenmath\cos.cpp
+.\cos.o: ..\Eigenmath\stdafx.h
+.\cos.o: ..\Eigenmath\defs.h
+.\cos.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\cos.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\cos.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\cos.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\cos.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\cos.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\cos.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\cos.o: ..\Eigenmath\prototypes.h

@@ -1,0 +1,11 @@
+.\quotient.o: ..\Eigenmath\quotient.cpp
+.\quotient.o: ..\Eigenmath\stdafx.h
+.\quotient.o: ..\Eigenmath\defs.h
+.\quotient.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\quotient.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\quotient.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\quotient.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\quotient.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\quotient.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\quotient.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\quotient.o: ..\Eigenmath\prototypes.h

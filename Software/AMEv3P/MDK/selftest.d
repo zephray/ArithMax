@@ -1,0 +1,12 @@
+.\selftest.o: ..\Eigenmath\selftest.cpp
+.\selftest.o: ..\Eigenmath\stdafx.h
+.\selftest.o: ..\Eigenmath\defs.h
+.\selftest.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\selftest.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\selftest.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\selftest.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\selftest.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\selftest.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\selftest.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\selftest.o: ..\Eigenmath\prototypes.h
+.\selftest.o: ..\Eigenmath\selftest.h

@@ -1,0 +1,11 @@
+.\itab.o: ..\Eigenmath\itab.cpp
+.\itab.o: ..\Eigenmath\stdafx.h
+.\itab.o: ..\Eigenmath\defs.h
+.\itab.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\itab.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\itab.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\itab.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\itab.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\itab.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\itab.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\itab.o: ..\Eigenmath\prototypes.h

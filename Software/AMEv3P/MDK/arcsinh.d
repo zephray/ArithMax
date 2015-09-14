@@ -1,0 +1,11 @@
+.\arcsinh.o: ..\Eigenmath\arcsinh.cpp
+.\arcsinh.o: ..\Eigenmath\stdafx.h
+.\arcsinh.o: ..\Eigenmath\defs.h
+.\arcsinh.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\arcsinh.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\arcsinh.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\arcsinh.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\arcsinh.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\arcsinh.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\arcsinh.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\arcsinh.o: ..\Eigenmath\prototypes.h

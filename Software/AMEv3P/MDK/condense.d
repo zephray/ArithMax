@@ -1,0 +1,11 @@
+.\condense.o: ..\Eigenmath\condense.cpp
+.\condense.o: ..\Eigenmath\stdafx.h
+.\condense.o: ..\Eigenmath\defs.h
+.\condense.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\condense.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\condense.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\condense.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\condense.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\condense.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\condense.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\condense.o: ..\Eigenmath\prototypes.h

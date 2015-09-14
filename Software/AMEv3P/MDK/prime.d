@@ -1,0 +1,11 @@
+.\prime.o: ..\Eigenmath\prime.cpp
+.\prime.o: ..\Eigenmath\stdafx.h
+.\prime.o: ..\Eigenmath\defs.h
+.\prime.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\prime.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\prime.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\prime.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\prime.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\prime.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\prime.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\prime.o: ..\Eigenmath\prototypes.h

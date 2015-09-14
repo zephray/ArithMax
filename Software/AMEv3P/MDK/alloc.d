@@ -1,0 +1,11 @@
+.\alloc.o: ..\Eigenmath\alloc.cpp
+.\alloc.o: ..\Eigenmath\stdafx.h
+.\alloc.o: ..\Eigenmath\defs.h
+.\alloc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\alloc.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\alloc.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\alloc.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\alloc.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\alloc.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\alloc.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\alloc.o: ..\Eigenmath\prototypes.h

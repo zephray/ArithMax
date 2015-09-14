@@ -1,0 +1,11 @@
+.\tensor.o: ..\Eigenmath\tensor.cpp
+.\tensor.o: ..\Eigenmath\stdafx.h
+.\tensor.o: ..\Eigenmath\defs.h
+.\tensor.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\tensor.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\tensor.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\tensor.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\tensor.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\tensor.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\tensor.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\tensor.o: ..\Eigenmath\prototypes.h

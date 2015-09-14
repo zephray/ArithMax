@@ -1,0 +1,11 @@
+.\factorial.o: ..\Eigenmath\factorial.cpp
+.\factorial.o: ..\Eigenmath\stdafx.h
+.\factorial.o: ..\Eigenmath\defs.h
+.\factorial.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\factorial.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\factorial.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\factorial.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\factorial.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\factorial.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\factorial.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\factorial.o: ..\Eigenmath\prototypes.h

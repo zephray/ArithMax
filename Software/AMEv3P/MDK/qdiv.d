@@ -1,0 +1,11 @@
+.\qdiv.o: ..\Eigenmath\qdiv.cpp
+.\qdiv.o: ..\Eigenmath\stdafx.h
+.\qdiv.o: ..\Eigenmath\defs.h
+.\qdiv.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\qdiv.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\qdiv.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\qdiv.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\qdiv.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\qdiv.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\qdiv.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\qdiv.o: ..\Eigenmath\prototypes.h

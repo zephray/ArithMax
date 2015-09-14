@@ -1,0 +1,11 @@
+.\rationalize.o: ..\Eigenmath\rationalize.cpp
+.\rationalize.o: ..\Eigenmath\stdafx.h
+.\rationalize.o: ..\Eigenmath\defs.h
+.\rationalize.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\rationalize.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\rationalize.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\rationalize.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\rationalize.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\rationalize.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\rationalize.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\rationalize.o: ..\Eigenmath\prototypes.h

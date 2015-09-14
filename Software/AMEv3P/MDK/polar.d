@@ -1,0 +1,11 @@
+.\polar.o: ..\Eigenmath\polar.cpp
+.\polar.o: ..\Eigenmath\stdafx.h
+.\polar.o: ..\Eigenmath\defs.h
+.\polar.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\polar.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\polar.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\polar.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\polar.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\polar.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\polar.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\polar.o: ..\Eigenmath\prototypes.h

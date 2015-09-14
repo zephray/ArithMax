@@ -1,0 +1,11 @@
+.\circexp.o: ..\Eigenmath\circexp.cpp
+.\circexp.o: ..\Eigenmath\stdafx.h
+.\circexp.o: ..\Eigenmath\defs.h
+.\circexp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\circexp.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\circexp.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\circexp.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\circexp.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\circexp.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\circexp.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\circexp.o: ..\Eigenmath\prototypes.h

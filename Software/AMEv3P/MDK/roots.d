@@ -1,0 +1,11 @@
+.\roots.o: ..\Eigenmath\roots.cpp
+.\roots.o: ..\Eigenmath\stdafx.h
+.\roots.o: ..\Eigenmath\defs.h
+.\roots.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\roots.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\roots.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\roots.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\roots.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\roots.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\roots.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\roots.o: ..\Eigenmath\prototypes.h

@@ -1,0 +1,11 @@
+.\atomize.o: ..\Eigenmath\atomize.cpp
+.\atomize.o: ..\Eigenmath\stdafx.h
+.\atomize.o: ..\Eigenmath\defs.h
+.\atomize.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\atomize.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\atomize.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\atomize.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\atomize.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\atomize.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\atomize.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\atomize.o: ..\Eigenmath\prototypes.h

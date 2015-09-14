@@ -1,0 +1,11 @@
+.\simfac.o: ..\Eigenmath\simfac.cpp
+.\simfac.o: ..\Eigenmath\stdafx.h
+.\simfac.o: ..\Eigenmath\defs.h
+.\simfac.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\simfac.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\simfac.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\simfac.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\simfac.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\simfac.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\simfac.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\simfac.o: ..\Eigenmath\prototypes.h

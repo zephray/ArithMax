@@ -1,0 +1,11 @@
+.\expcos.o: ..\Eigenmath\expcos.cpp
+.\expcos.o: ..\Eigenmath\stdafx.h
+.\expcos.o: ..\Eigenmath\defs.h
+.\expcos.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\expcos.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\expcos.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\expcos.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\expcos.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\expcos.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\expcos.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\expcos.o: ..\Eigenmath\prototypes.h

@@ -1,0 +1,11 @@
+.\mprime.o: ..\Eigenmath\mprime.cpp
+.\mprime.o: ..\Eigenmath\stdafx.h
+.\mprime.o: ..\Eigenmath\defs.h
+.\mprime.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\mprime.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\mprime.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\mprime.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\mprime.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\mprime.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\mprime.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\mprime.o: ..\Eigenmath\prototypes.h

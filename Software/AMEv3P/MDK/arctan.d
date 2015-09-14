@@ -1,0 +1,11 @@
+.\arctan.o: ..\Eigenmath\arctan.cpp
+.\arctan.o: ..\Eigenmath\stdafx.h
+.\arctan.o: ..\Eigenmath\defs.h
+.\arctan.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\arctan.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\arctan.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\arctan.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\arctan.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\arctan.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\arctan.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\arctan.o: ..\Eigenmath\prototypes.h

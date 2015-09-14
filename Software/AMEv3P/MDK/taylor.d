@@ -1,0 +1,11 @@
+.\taylor.o: ..\Eigenmath\taylor.cpp
+.\taylor.o: ..\Eigenmath\stdafx.h
+.\taylor.o: ..\Eigenmath\defs.h
+.\taylor.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\taylor.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\taylor.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\taylor.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\taylor.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\taylor.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\taylor.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\taylor.o: ..\Eigenmath\prototypes.h

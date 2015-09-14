@@ -1,0 +1,11 @@
+.\power.o: ..\Eigenmath\power.cpp
+.\power.o: ..\Eigenmath\stdafx.h
+.\power.o: ..\Eigenmath\defs.h
+.\power.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\power.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\power.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\power.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\power.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\power.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\power.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\power.o: ..\Eigenmath\prototypes.h

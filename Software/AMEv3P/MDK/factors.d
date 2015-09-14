@@ -1,0 +1,11 @@
+.\factors.o: ..\Eigenmath\factors.cpp
+.\factors.o: ..\Eigenmath\stdafx.h
+.\factors.o: ..\Eigenmath\defs.h
+.\factors.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\factors.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\factors.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\factors.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\factors.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\factors.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\factors.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\factors.o: ..\Eigenmath\prototypes.h

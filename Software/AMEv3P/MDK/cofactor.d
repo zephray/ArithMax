@@ -1,0 +1,11 @@
+.\cofactor.o: ..\Eigenmath\cofactor.cpp
+.\cofactor.o: ..\Eigenmath\stdafx.h
+.\cofactor.o: ..\Eigenmath\defs.h
+.\cofactor.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\cofactor.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\cofactor.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\cofactor.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\cofactor.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\cofactor.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\cofactor.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\cofactor.o: ..\Eigenmath\prototypes.h

@@ -1,0 +1,11 @@
+.\msqrt.o: ..\Eigenmath\msqrt.cpp
+.\msqrt.o: ..\Eigenmath\stdafx.h
+.\msqrt.o: ..\Eigenmath\defs.h
+.\msqrt.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\msqrt.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\msqrt.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\msqrt.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\msqrt.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\msqrt.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\msqrt.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\msqrt.o: ..\Eigenmath\prototypes.h

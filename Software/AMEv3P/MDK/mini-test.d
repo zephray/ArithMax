@@ -1,0 +1,11 @@
+.\mini-test.o: ..\Eigenmath\mini-test.cpp
+.\mini-test.o: ..\Eigenmath\stdafx.h
+.\mini-test.o: ..\Eigenmath\defs.h
+.\mini-test.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\mini-test.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\mini-test.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\mini-test.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\mini-test.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\mini-test.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\mini-test.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\mini-test.o: ..\Eigenmath\prototypes.h

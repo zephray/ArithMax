@@ -1,0 +1,11 @@
+.\rewrite.o: ..\Eigenmath\rewrite.cpp
+.\rewrite.o: ..\Eigenmath\stdafx.h
+.\rewrite.o: ..\Eigenmath\defs.h
+.\rewrite.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\rewrite.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\rewrite.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\rewrite.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\rewrite.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\rewrite.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\rewrite.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\rewrite.o: ..\Eigenmath\prototypes.h

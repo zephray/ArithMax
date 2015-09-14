@@ -1,0 +1,11 @@
+.\variables.o: ..\Eigenmath\variables.cpp
+.\variables.o: ..\Eigenmath\stdafx.h
+.\variables.o: ..\Eigenmath\defs.h
+.\variables.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\variables.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\variables.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\variables.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\variables.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\variables.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\variables.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\variables.o: ..\Eigenmath\prototypes.h

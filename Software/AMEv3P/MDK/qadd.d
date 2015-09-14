@@ -1,0 +1,11 @@
+.\qadd.o: ..\Eigenmath\qadd.cpp
+.\qadd.o: ..\Eigenmath\stdafx.h
+.\qadd.o: ..\Eigenmath\defs.h
+.\qadd.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\qadd.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\qadd.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\qadd.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\qadd.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\qadd.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\qadd.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\qadd.o: ..\Eigenmath\prototypes.h

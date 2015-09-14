@@ -1,0 +1,11 @@
+.\divisors.o: ..\Eigenmath\divisors.cpp
+.\divisors.o: ..\Eigenmath\stdafx.h
+.\divisors.o: ..\Eigenmath\defs.h
+.\divisors.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\divisors.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\divisors.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\divisors.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\divisors.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\divisors.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\divisors.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\divisors.o: ..\Eigenmath\prototypes.h

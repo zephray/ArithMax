@@ -1,0 +1,11 @@
+.\qpow.o: ..\Eigenmath\qpow.cpp
+.\qpow.o: ..\Eigenmath\stdafx.h
+.\qpow.o: ..\Eigenmath\defs.h
+.\qpow.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\qpow.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\qpow.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\qpow.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\qpow.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\qpow.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\qpow.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\qpow.o: ..\Eigenmath\prototypes.h

@@ -1,0 +1,11 @@
+.\factorpoly.o: ..\Eigenmath\factorpoly.cpp
+.\factorpoly.o: ..\Eigenmath\stdafx.h
+.\factorpoly.o: ..\Eigenmath\defs.h
+.\factorpoly.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\factorpoly.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\factorpoly.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\factorpoly.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\factorpoly.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\factorpoly.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\factorpoly.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\factorpoly.o: ..\Eigenmath\prototypes.h

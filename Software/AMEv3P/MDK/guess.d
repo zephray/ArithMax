@@ -1,0 +1,11 @@
+.\guess.o: ..\Eigenmath\guess.cpp
+.\guess.o: ..\Eigenmath\stdafx.h
+.\guess.o: ..\Eigenmath\defs.h
+.\guess.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\guess.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\guess.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\guess.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\guess.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\guess.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\guess.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\guess.o: ..\Eigenmath\prototypes.h

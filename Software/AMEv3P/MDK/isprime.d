@@ -1,0 +1,11 @@
+.\isprime.o: ..\Eigenmath\isprime.cpp
+.\isprime.o: ..\Eigenmath\stdafx.h
+.\isprime.o: ..\Eigenmath\defs.h
+.\isprime.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\isprime.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\isprime.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\isprime.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\isprime.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\isprime.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\isprime.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\isprime.o: ..\Eigenmath\prototypes.h

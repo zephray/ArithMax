@@ -1,0 +1,11 @@
+.\sum.o: ..\Eigenmath\sum.cpp
+.\sum.o: ..\Eigenmath\stdafx.h
+.\sum.o: ..\Eigenmath\defs.h
+.\sum.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\sum.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\sum.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\sum.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\sum.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\sum.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\sum.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\sum.o: ..\Eigenmath\prototypes.h

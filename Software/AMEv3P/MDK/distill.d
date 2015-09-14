@@ -1,0 +1,11 @@
+.\distill.o: ..\Eigenmath\distill.cpp
+.\distill.o: ..\Eigenmath\stdafx.h
+.\distill.o: ..\Eigenmath\defs.h
+.\distill.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\distill.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\distill.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\distill.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\distill.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\distill.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\distill.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\distill.o: ..\Eigenmath\prototypes.h

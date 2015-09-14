@@ -1,0 +1,11 @@
+.\contract.o: ..\Eigenmath\contract.cpp
+.\contract.o: ..\Eigenmath\stdafx.h
+.\contract.o: ..\Eigenmath\defs.h
+.\contract.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\contract.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\contract.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\contract.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\contract.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\contract.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\contract.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\contract.o: ..\Eigenmath\prototypes.h

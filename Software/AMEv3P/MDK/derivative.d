@@ -1,0 +1,11 @@
+.\derivative.o: ..\Eigenmath\derivative.cpp
+.\derivative.o: ..\Eigenmath\stdafx.h
+.\derivative.o: ..\Eigenmath\defs.h
+.\derivative.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\derivative.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\derivative.o: C:\Keil\ARM\ARMCC\bin\..\include\ctype.h
+.\derivative.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\derivative.o: C:\Keil\ARM\ARMCC\bin\..\include\setjmp.h
+.\derivative.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\derivative.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+.\derivative.o: ..\Eigenmath\prototypes.h
