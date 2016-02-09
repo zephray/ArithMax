@@ -1,3 +1,9 @@
+# Project status
+
+This project is currently suspended.
+This project is currently suspended.
+This project is currently suspended.
+
 # ArithMax Overview
 
 
@@ -7,11 +13,11 @@ ArithMax is an DIY calculator project which was launched by ZephRay(nbzwt) in cn
 
 The hardware of ArithMax has been changed several times, now we have one branch: ArithMax E(entry)
 
-ArithMax E:
+ArithMax EV3P:
 
-* CPU:STM32F429 @ <= 180MHz
-* RAM:SDRAM 16MB
-* ROM:T.B.D.
+* CPU:STM32F407
+* RAM:192KB
+* ROM:1MB
 * Screen:COG FSTN 96*31 with status
 * Keypad:PEP-290 keypad
 * IO:JTAG SW-DP,TF Card,USB
