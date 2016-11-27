@@ -20,40 +20,40 @@ void PM_SetCPUFreq(uint8_t freq)
   u8 PLL_Q=7;
   RCC_ClocksTypeDef RCC_Clocks;
   
-  //Ñ¡ÔñHSIÎªÊ±ÖÓÔ´
+  //é€‰æ‹©HSIä¸ºæ—¶é’Ÿæº
   RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
   RCC->CFGR |= RCC_CFGR_SW_HSI;
-  //µÈ´ıÊ±ÖÓÔ´±»Ñ¡ÔñÎªHSI
+  //ç­‰å¾…æ—¶é’Ÿæºè¢«é€‰æ‹©ä¸ºHSI
   while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_HSI);
-  if (freq!=16)//Èç¹ûĞèÒªÊ¹ÓÃPLL
+  if (freq!=16)//å¦‚æœéœ€è¦ä½¿ç”¨PLL
   {
     PLL_N=freq;
-    //¹Ø±ÕÖ÷PLL
+    //å…³é—­ä¸»PLL
     RCC->CR &= (uint32_t)((uint32_t)~(RCC_CR_PLLON));
-    //ÅäÖÃÖ÷PLL
+    //é…ç½®ä¸»PLL
     RCC->PLLCFGR = PLL_M | (PLL_N << 6) | (((PLL_P >> 1) -1) << 16) |
                  (RCC_PLLCFGR_PLLSRC_HSI) | (PLL_Q << 24);
-    //ÆôÓÃÖ÷PLL
+    //å¯ç”¨ä¸»PLL
     RCC->CR |= RCC_CR_PLLON;
-    //µÈ´ıPLL×¼±¸ºÃ
+    //ç­‰å¾…PLLå‡†å¤‡å¥½
     while((RCC->CR & RCC_CR_PLLRDY) == 0);
-    //ÆôÓÃFLASHÔ¤¶Á£¬I/D-Cache£¬ÅäÖÃFlashµÈ´ı
+    //å¯ç”¨FLASHé¢„è¯»ï¼ŒI/D-Cacheï¼Œé…ç½®Flashç­‰å¾…
     FLASH->ACR = FLASH_ACR_PRFTEN |FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_4WS;
-    //½«Ê±ÖÓÔ´Ñ¡ÎªPLL
+    //å°†æ—¶é’Ÿæºé€‰ä¸ºPLL
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
     RCC->CFGR |= RCC_CFGR_SW_PLL;
-    //µÈ´ıÖ÷Ê±ÖÓÔ´±»ÇĞ»»³ÉPLL
+    //ç­‰å¾…ä¸»æ—¶é’Ÿæºè¢«åˆ‡æ¢æˆPLL
     while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_PLL);
   }
-  else//Èç¹ûÊ±ÖÓÎª16MHz
+  else//å¦‚æœæ—¶é’Ÿä¸º16MHz
   {
-    //¹Ø±ÕÖ÷PLL
+    //å…³é—­ä¸»PLL
     RCC->CR &= (uint32_t)((uint32_t)~(RCC_CR_PLLON));
-    //ÆôÓÃFLASHÔ¤¶Á£¬I/D-Cache£¬ÅäÖÃFlashµÈ´ı
+    //å¯ç”¨FLASHé¢„è¯»ï¼ŒI/D-Cacheï¼Œé…ç½®Flashç­‰å¾…
     FLASH->ACR = FLASH_ACR_PRFTEN |FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_0WS;
   }
   SystemCoreClockUpdate();
-  //ÖØĞÂÅäÖÃSysTick
+  //é‡æ–°é…ç½®SysTick
   RCC_GetClocksFreq(&RCC_Clocks);
   SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
 }
@@ -63,24 +63,24 @@ void PM_AdcInit()
   ADC_InitTypeDef ADC_InitStructure;
   ADC_CommonInitTypeDef ADC_CommonInitStructure;
   
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE); //¿ªADC1Ê±ÖÓ
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE); //å¼€ADC1æ—¶é’Ÿ
   ADC_DeInit();
-  ADC_InitStructure.ADC_Resolution = ADC_Resolution_12b;  //¾«¶ÈÎª12Î»           
-  ADC_InitStructure.ADC_ScanConvMode = ENABLE;   //É¨Ãè×ª»»Ä£Ê½Ê§ÄÜ
-  ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;  //Á¬Ğø×ª»»Ê¹ÄÜ
-  ADC_InitStructure.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None; //²»ÓÃÍâ²¿´¥·¢£¬Èí¼ş´¥·¢×ª»»
+  ADC_InitStructure.ADC_Resolution = ADC_Resolution_12b;  //ç²¾åº¦ä¸º12ä½           
+  ADC_InitStructure.ADC_ScanConvMode = ENABLE;   //æ‰«æè½¬æ¢æ¨¡å¼ä½¿èƒ½
+  ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;  //è¿ç»­è½¬æ¢å¤±èƒ½
+  ADC_InitStructure.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None; //ä¸ç”¨å¤–éƒ¨è§¦å‘ï¼Œè½¯ä»¶è§¦å‘è½¬æ¢
   ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_T1_CC1;
-  ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right; //Êı¾İÓÒ¶ÔÆë£¬µÍ×Ö½Ú¶ÔÆë
-  ADC_InitStructure.ADC_NbrOfConversion = 1;    //¹æ¶¨ÁËË³Ğò½øĞĞ¹æÔò×ª»»µÄADCÍ¨µÀµÄÊıÄ¿
+  ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right; //æ•°æ®å³å¯¹é½ï¼Œä½å­—èŠ‚å¯¹é½
+  ADC_InitStructure.ADC_NbrOfConversion = 1;    //è§„å®šäº†é¡ºåºè¿›è¡Œè§„åˆ™è½¬æ¢çš„ADCé€šé“çš„æ•°ç›®
   ADC_Init(ADC1, &ADC_InitStructure);      
   
-  ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent; //¶ÀÁ¢Ä£Ê½
-  ADC_CommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div8; //·ÖÆµÎª8
-  ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_Disabled; //Ê§ÄÜDMA_MODE
-  ADC_CommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_20Cycles;//Á½´Î²ÉÑù¼ä¸ô20¸öÖÜÆÚ
+  ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent; //ç‹¬ç«‹æ¨¡å¼
+  ADC_CommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div8; //åˆ†é¢‘ä¸º8
+  ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_Disabled; //å¤±èƒ½DMA_MODE
+  ADC_CommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_20Cycles;//ä¸¤æ¬¡é‡‡æ ·é—´éš”20ä¸ªå‘¨æœŸ
   ADC_CommonInit(&ADC_CommonInitStructure);
   
-  ADC_Cmd(ADC1, ENABLE);       //Ê¹ÄÜADC1
+  ADC_Cmd(ADC1, ENABLE);       //ä½¿èƒ½ADC1
 }
 
 void PM_AdcDeInit()
@@ -122,7 +122,7 @@ uint32_t PM_GetVolt()
   volt=0;
   for(i=0;i<5;i++)
   {
-    ADC_RegularChannelConfig(ADC1, ADC_Channel_8, 1, ADC_SampleTime_480Cycles);//¹æÔòÍ¨µÀÅäÖÃ£¬1±íÊ¾¹æÔò×é²ÉÑùË³Ğò
+    ADC_RegularChannelConfig(ADC1, ADC_Channel_8, 1, ADC_SampleTime_480Cycles);//è§„åˆ™é€šé“é…ç½®ï¼Œ1è¡¨ç¤ºè§„åˆ™ç»„é‡‡æ ·é¡ºåº
     ADC_SoftwareStartConv(ADC1);
     while(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ));
     volt += ADC_GetConversionValue(ADC1);
@@ -152,12 +152,12 @@ void PM_EnterStandbyMode()
   LCD_PowerDown();
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR,ENABLE);
   PWR_WakeUpPinCmd(ENABLE);
-  SCB->SCR|=1<<2;//Ê¹ÄÜSLEEPDEEPÎ» (SYS->CTRL)
-  PWR->CR|=1<<2;           //Çå³ıWake-up ±êÖ¾
-  PWR->CR|=1<<1;           //PDDSÖÃÎ»
+  SCB->SCR|=1<<2;//ä½¿èƒ½SLEEPDEEPä½ (SYS->CTRL)
+  PWR->CR|=1<<2;           //æ¸…é™¤Wake-up æ ‡å¿—
+  PWR->CR|=1<<1;           //PDDSç½®ä½
 #ifdef MDK_ARM
 	WFI();
 #else
-  asm("WFI");               //Ö´ĞĞWFEÖ¸Áî
+  asm("WFI");               //æ‰§è¡ŒWFEæŒ‡ä»¤
 #endif
 }
