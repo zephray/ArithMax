@@ -21,20 +21,3 @@ ArithMax EV3P:
 * Screen:COG FSTN 96*31 with status
 * Keypad:PEP-290 keypad
 * IO:JTAG SW-DP,TF Card,USB
-
-# Software
-
-ArithMax OS 1.1: Single-thread message-driven manager software.(NOT AN OS)
-
-Using eigenmath as math engine.
-
-# Price
-
-ArithMax E: <= $40
-
-# Contact me
-
-Webstie: 
-http://www.zephray.com
-
-Email:nbzwt@126.com or nbzwt@live.cn
